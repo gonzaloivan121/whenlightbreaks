@@ -1,0 +1,87 @@
+<main class="hero-showcase" aria-labelledby="hero-showcase-title">
+    <header class="showcase-header">
+        <h1 id="hero-showcase-title">Hero Showcase</h1>
+        <p>All Hero input combinations are shown below. Total examples: {{ totalHeroes }}.</p>
+    </header>
+
+    <section class="showcase-group" aria-labelledby="section-hero-title">
+        <h2 id="section-hero-title">Section Heroes ({{ sectionExamples.length }})</h2>
+
+        <div class="example-grid" role="list" aria-label="Section hero variations">
+            @for (example of sectionExamples; track example.id) {
+                <article class="example-card" role="listitem">
+                    <h3>{{ example.title }}</h3>
+                    <p class="example-meta">{{ example.description }}</p>
+
+                    <hero-component
+                        [backgroundType]="example.backgroundType"
+                        [size]="example.size"
+                        [overlay]="example.overlay"
+                        [fullScreen]="example.fullScreen"
+                        [imageSrc]="example.imageSrc"
+                        [imageAlt]="example.imageAlt"
+                        [videoSrc]="example.videoSrc"
+                        [videoPoster]="example.videoPoster">
+                        <p class="hero-eyebrow">{{ example.contentEyebrow }}</p>
+                        <h4>{{ example.contentTitle }}</h4>
+                        <p>{{ example.contentBody }}</p>
+                    </hero-component>
+
+                    <button
+                        type="button"
+                        class="copy-trigger"
+                        [class.copied]="isCopied(example.id)"
+                        (click)="copyHeroCode(example)"
+                        [attr.aria-label]="'Copy code for ' + example.title">
+                        @if (isCopied(example.id)) {
+                            Copied
+                        } @else {
+                            Copy code
+                        }
+                    </button>
+                </article>
+            }
+        </div>
+    </section>
+
+    <section class="showcase-group" aria-labelledby="fullscreen-hero-title">
+        <h2 id="fullscreen-hero-title">Full-Screen Heroes ({{ fullScreenExamples.length }})</h2>
+        <p class="group-note">These examples render at viewport height because full-screen mode is enabled.</p>
+
+        <div class="fullscreen-list" role="list" aria-label="Full-screen hero variations">
+            @for (example of fullScreenExamples; track example.id) {
+                <article class="fullscreen-card" role="listitem">
+                    <h3>{{ example.title }}</h3>
+                    <p class="example-meta">{{ example.description }}</p>
+
+                    <hero-component
+                        [backgroundType]="example.backgroundType"
+                        [size]="example.size"
+                        [overlay]="example.overlay"
+                        [fullScreen]="example.fullScreen"
+                        [imageSrc]="example.imageSrc"
+                        [imageAlt]="example.imageAlt"
+                        [videoSrc]="example.videoSrc"
+                        [videoPoster]="example.videoPoster">
+                        <p class="hero-eyebrow">{{ example.contentEyebrow }}</p>
+                        <h4>{{ example.contentTitle }}</h4>
+                        <p>{{ example.contentBody }}</p>
+                    </hero-component>
+
+                    <button
+                        type="button"
+                        class="copy-trigger"
+                        [class.copied]="isCopied(example.id)"
+                        (click)="copyHeroCode(example)"
+                        [attr.aria-label]="'Copy code for ' + example.title">
+                        @if (isCopied(example.id)) {
+                            Copied
+                        } @else {
+                            Copy code
+                        }
+                    </button>
+                </article>
+            }
+        </div>
+    </section>
+</main>
