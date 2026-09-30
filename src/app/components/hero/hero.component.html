@@ -1,0 +1,32 @@
+<section [class]="heroClass()">
+    @if (showImageBackground()) {
+        <img
+            class="hero-media hero-image"
+            [src]="resolvedImageSrc()"
+            [attr.alt]="resolvedImageAlt()"
+            [attr.role]="resolvedImageAlt() ? null : 'presentation'" />
+    }
+
+    @if (showVideoBackground()) {
+        <video
+            class="hero-media hero-video"
+            [attr.poster]="resolvedVideoPoster() || null"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            aria-hidden="true"
+            [muted]="videoMuted()"
+            fetchpriority="high"
+        >
+            <source [src]="resolvedVideoSrc()" type="video/mp4">
+        </video>
+    }
+
+    @if (overlay()) {
+        <div class="hero-overlay" aria-hidden="true"></div>
+    }
+
+    <ng-content select="hero-content-component"></ng-content>
+</section>

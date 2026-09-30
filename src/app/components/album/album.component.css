@@ -1,0 +1,42 @@
+.album {
+    border-radius: 12px;
+    aspect-ratio: 1 / 1;
+
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 100%;
+
+    text-decoration: none;
+    color: inherit;
+
+    .album-info {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+
+        transition: opacity 0.3s ease;
+
+        .album-icon {
+            font-size: 3em;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+    }
+
+    &:hover {
+        .album-info {
+            opacity: 1;
+        }
+    }
+}

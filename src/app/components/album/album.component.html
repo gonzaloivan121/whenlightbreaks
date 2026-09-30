@@ -1,0 +1,12 @@
+<a
+    class="album"
+    [href]="album().albumUrl"
+    target="_blank"
+    style="background-image: url('{{ album().coverUrl }}')"
+    [title]="album().title"
+    [attr.aria-label]="album().title"
+>
+    <div class="album-info">
+        <ng-icon name="ionEnterOutline" class="album-icon" />
+    </div>
+</a>

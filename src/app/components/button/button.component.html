@@ -1,0 +1,11 @@
+<button type="button" [class]="buttonClass()" [class.disabled]="disabled()" [disabled]="disabled()" (click)="onClick.emit()">
+    @if (icon() && iconPosition() === 'start') {
+        <ng-icon [name]="icon()" class="icon-start" />
+    }
+
+    {{ label() }}
+
+    @if (icon() && iconPosition() === 'end') {
+        <ng-icon [name]="icon()" class="icon-end" />
+    }
+</button>

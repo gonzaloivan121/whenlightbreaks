@@ -1,0 +1,10 @@
+<div class="to-top" [class.show-scrollTop]="windowScrolled()">
+    <button-component
+        label="Top"
+        variant="light"
+        size="small"
+        [rounded]="true"
+        icon="ionArrowUp"
+        (onClick)="scrollToTop()"
+    ></button-component>
+</div>

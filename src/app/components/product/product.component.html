@@ -1,0 +1,21 @@
+<div class="product" [title]="product().name">
+    <img class="product-image"
+        [src]="product().imageUrl"
+        [alt]="product().description"
+    />
+
+    <div class="product-content">
+        <h3 class="product-title">{{ product().name }}</h3>
+        <p class="product-description">{{ product().description }}</p>
+        <div class="product-info">
+            <p class="product-price">${{ product().price }}</p>
+            <button-component
+                variant="light"
+                size="small"
+                label="Buy"
+                icon="ionBasket"
+                (onClick)="BuyProduct()"
+            ></button-component>
+        </div>
+    </div>
+</div>

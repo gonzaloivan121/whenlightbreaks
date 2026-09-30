@@ -1,0 +1,112 @@
+:host {
+    display: block;
+}
+
+.hero {
+    --hero-bg: var(--dark-bg);
+    --hero-overlay-color: var(--dark-bg);
+    --hero-overlay-opacity: 0.5;
+    --hero-size-fullscreen: 100dvh;
+    --hero-normal-border-radius: 0;
+    --hero-rounded-border-radius: 1rem;
+    --hero-border-radius: var(--hero-normal-border-radius);
+    --hero-size-small: 18rem;
+    --hero-size-medium: 26rem;
+    --hero-size-large: 36rem;
+    --hero-min-height: var(--hero-size-medium);
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    min-height: var(--hero-min-height);
+    border-radius: var(--hero-border-radius);
+    background-color: var(--hero-bg);
+    color: #f8fafc;
+    height: 100%;
+
+    &.small {
+        --hero-min-height: var(--hero-size-small);
+    }
+
+    &.medium {
+        --hero-min-height: var(--hero-size-medium);
+    }
+
+    &.large {
+        --hero-min-height: var(--hero-size-large);
+    }
+
+    &.primary {
+        --hero-overlay-color: var(--primary-bg);
+        --hero-bg: var(--primary-bg);
+    }
+
+    &.secondary {
+        --hero-overlay-color: var(--secondary-bg);
+        --hero-bg: var(--secondary-bg);
+    }
+
+    &.tertiary {
+        --hero-overlay-color: var(--tertiary-bg);
+        --hero-bg: var(--tertiary-bg);
+    }
+
+    &.danger {
+        --hero-overlay-color: var(--danger-bg);
+        --hero-bg: var(--danger-bg);
+    }
+
+    &.success {
+        --hero-overlay-color: var(--success-bg);
+        --hero-bg: var(--success-bg);
+    }
+
+    &.warning {
+        --hero-overlay-color: var(--warning-bg);
+        --hero-bg: var(--warning-bg);
+    }
+
+    &.info {
+        --hero-overlay-color: var(--info-bg);
+        --hero-bg: var(--info-bg);
+    }
+
+    &.light {
+        --hero-overlay-color: var(--light-bg);
+        --hero-bg: var(--light-bg);
+    }
+
+    &.dark {
+        --hero-overlay-color: var(--dark-bg);
+        --hero-bg: var(--dark-bg);
+    }
+
+    &.fullscreen {
+        height: var(--hero-size-fullscreen);
+        min-height: var(--hero-size-fullscreen);
+    }
+
+    &.rounded {
+        border-radius: var(--hero-rounded-border-radius);
+    }
+
+    & .hero-media {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+    }
+
+    & .hero-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: var(--hero-overlay-color);
+        opacity: var(--hero-overlay-opacity);
+    }
+}

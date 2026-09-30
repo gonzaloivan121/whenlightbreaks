@@ -1,0 +1,12 @@
+<a
+    class="song"
+    [href]="song().songUrl"
+    target="_blank"
+    style="background-image: url('{{ song().coverUrl }}')"
+    [title]="song().title" 
+    [attr.aria-label]="song().title"
+>
+    <div class="song-info">
+        <ng-icon name="ionEnterOutline" class="song-icon" />
+    </div>
+</a>

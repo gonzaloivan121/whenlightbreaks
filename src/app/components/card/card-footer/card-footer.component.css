@@ -1,0 +1,26 @@
+:host {
+    display: block;
+}
+
+.card-footer {
+    padding: 1rem 1.125rem;
+    background: #f8fafc;
+    border-top: 0.0625rem solid #e2e8f0;
+}
+
+.card-footer :where(h1, h2, h3, h4, p) {
+    margin: 0;
+}
+
+.card-footer :where(h1, h2, h3, h4) {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #0f172a;
+}
+
+.card-footer :where(p) {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+}

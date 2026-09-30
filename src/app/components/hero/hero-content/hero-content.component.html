@@ -1,0 +1,15 @@
+<div class="hero-content">
+    @if (eyebrow()) {
+        <p class="hero-eyebrow">{{ eyebrow() }}</p>
+    }
+
+    @if (title()) {
+        <h1 class="hero-title">{{ title() }}</h1>
+    }
+
+    @if (description()) {
+        <p class="hero-description">{{ description() }}</p>
+    }
+
+    <ng-content></ng-content>
+</div>

@@ -1,0 +1,27 @@
+.card {
+    --card-border-radius: 0.75rem;
+    --card-bg: #FFFFFF;
+    --card-fg: #0F172A;
+    --card-border:#DBE4F0;
+
+    display: grid;
+    border: 0.0625rem solid var(--card-border);
+    background: var(--card-bg);
+    color: var(--card-fg);
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+
+    &.rounded {
+        --card-border-radius: 1rem;
+    }
+
+    &.dark {
+        --card-bg: #0F172A;
+        --card-fg: #F8FAFC;
+        --card-border:#334155;
+    }
+
+    &.elevated {
+        box-shadow: 0 0.625rem 1.75rem -1rem rgba(15, 23, 42, 0.35);
+    }
+}

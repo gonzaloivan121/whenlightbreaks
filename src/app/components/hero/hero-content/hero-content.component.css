@@ -1,0 +1,46 @@
+.hero-content {
+    margin-inline: auto;
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: inherit;
+
+    :where(h1, h2, h3, h4, p) {
+        margin: 0;
+    }
+
+    .hero-eyebrow {
+        margin: 0;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(241, 245, 249, 0.85);
+    }
+
+    .hero-title {
+        margin: 0;
+        font-size: clamp(2rem, 4.2vw, 3rem);
+        font-weight: 700;
+        letter-spacing: 1rem;
+        line-height: 1.05;
+        text-wrap: balance;
+        text-transform: uppercase;
+    }
+
+    .hero-description {
+        margin: 0;
+        max-width: 40rem;
+        font-size: clamp(1rem, 1.4vw, 1.25rem);
+        line-height: 1.6;
+        color: rgba(241, 245, 249, 0.92);
+    }
+}
+
+@media (max-width: 40rem) {
+    .hero-content {
+        gap: 1rem;
+    }
+}

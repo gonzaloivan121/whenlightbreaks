@@ -1,0 +1,13 @@
+<section class="card-body" [class.has-image]="hasImage()">
+    @if (resolvedImageSrc(); as src) {
+        <img
+            class="card-body-image"
+            [src]="src"
+            [alt]="imageAlt()"
+            [width]="imageWidth()"
+            [height]="imageHeight()"
+        />
+    } @else {
+        <ng-content></ng-content>
+    }
+</section>
