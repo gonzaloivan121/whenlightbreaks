@@ -1,0 +1,16 @@
+.store {
+    --columns: 3;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+    gap: 1.5em;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        --columns: 2;
+    }
+
+    @media (max-width: 480px) {
+        --columns: 1;
+    }
+}

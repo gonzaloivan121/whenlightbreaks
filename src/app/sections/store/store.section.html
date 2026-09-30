@@ -1,0 +1,9 @@
+<container-component>
+    <title-component title="Store" color="primary" size="large" [centered]="true"></title-component>
+
+    <div class="store">
+        @for (product of products(); track product.id) {
+            <product-component [product]="product"></product-component>
+        }
+    </div>
+</container-component>
