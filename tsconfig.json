@@ -12,12 +12,36 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+    "paths": {
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@components/*": [
+        "./src/app/components/*"
+      ],
+      "@models/*": [
+        "./src/app/models/*"
+      ],
+      "@pages/*": [
+        "./src/app/pages/*"
+      ],
+      "@sections/*": [
+        "./src/app/sections/*"
+      ],
+      "@services/*": [
+        "./src/app/services/*"
+      ],
+      "@environments/*": [
+        "./src/environments/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   },
   "files": [],
   "references": [
