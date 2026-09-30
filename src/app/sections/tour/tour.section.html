@@ -1,0 +1,44 @@
+<container-component>
+    <title-component title="Tour" color="primary" size="large" [centered]="true"></title-component>
+
+    @if (hasConcerts()) {
+        <div class="tour">
+            <div class="table-header">Date</div>
+            <div class="table-header">Details</div>
+            <div class="table-header">Status</div>
+            <div class="table-header">Tickets</div>
+    
+            @for (concert of concerts(); track concert.id) {
+                @let disableButton = concert.status === 'sold-out' || concert.status === 'coming-soon' || concert.status === 'cancelled';
+    
+                <div class="table-cell date">{{ concert.date | date:'mediumDate' }}</div>
+                <div class="table-cell venue">
+                    <p class="title">{{ concert.title }}</p>
+                    <p class="subtitle">{{ concert.subtitle }}</p>
+                    @if (concert.directionsUrl) {
+                        <a class="location" [href]="concert.directionsUrl" target="_blank" rel="noopener noreferrer">
+                            {{ concert.venue }}, {{ concert.city }}, {{ concert.state }}, {{ concert.country }}
+                        </a>
+                    } @else {
+                        <p class="location">{{ concert.venue }}, {{ concert.city }}, {{ concert.state }}, {{ concert.country }}</p>
+                    }
+                </div>
+                <div class="table-cell status {{ concert.status }}">{{ concert.status | separate:'-' | titlecase }}</div>
+                <div class="table-cell action">
+                    <button-component
+                        label="Tickets"
+                        icon="ionTicket"
+                        variant="light"
+                        size="small"
+                        [disabled]="disableButton"
+                        [block]="true"
+                        (onClick)="BuyTickets(concert.ticketsUrl)"
+                        title="Tickets"
+                    ></button-component>
+                </div>
+            }
+        </div>
+    } @else {
+        <div class="no-concerts">No concerts available.</div>
+    }
+</container-component>

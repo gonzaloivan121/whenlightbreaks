@@ -1,0 +1,19 @@
+<main class="notfound-page" aria-label="Not Found page">
+    <hero-component
+        backgroundType="video"
+        [overlay]="false"
+        [fullScreen]="true"
+        videoSrc="assets/videos/hero.mp4"
+        videoPoster="assets/images/hero.webp"
+    >
+        <hero-content-component
+            title="NOT FOUND"
+            description="The page you are looking for does not exist. Please check the URL or return to the home page."
+        >
+            <div class="hero-actions" role="group" aria-label="Not Found actions">
+                <button-component label="Go Home" variant="dark" icon="ionHome" (onClick)="GoHome()" title="Go Home"></button-component>
+                <button-component label="Go Back" variant="light" icon="ionArrowBack" iconPosition="end" (onClick)="GoBack()" title="Go Back"></button-component>
+            </div>
+        </hero-content-component>
+    </hero-component>
+</main>

@@ -1,0 +1,53 @@
+.about {
+    .about-text {
+        p {
+            font-size: 16px;
+            line-height: 26px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            margin-bottom: 1.5em;
+            text-align: justify;
+        }
+
+        h2 {
+            font-size: 24px;
+            line-height: 32px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+    }
+
+    .about-image {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        float: right;
+        margin-left: 1.5em;
+        margin-bottom: 1.5em;
+        width: 50%;
+        border-radius: 12px;
+
+        &.left {
+            float: left;
+            margin-right: 1.5em;
+            margin-left: 0;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .about-text p {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        .about-image {
+            float: none;
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+}

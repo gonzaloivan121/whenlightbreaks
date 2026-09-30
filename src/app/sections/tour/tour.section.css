@@ -1,0 +1,106 @@
+/* Base Layout & Table Setup */
+.tour {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    align-items: center;
+}
+
+/* Headers & Cells styling */
+.table-header {
+    background-color: var(--dark-bg);
+    color: var(--dark-fg);
+    font-weight: bold;
+    padding: 18px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+:nth-child(1 of .table-header) {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+:nth-last-child(1 of .table-header) {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.table-cell {
+    padding: 20px 15px;
+    font-size: 0.95rem;
+
+    .title {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.25em;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+        color: #888;
+        margin-bottom: 0.25em;
+    }
+
+    .location {
+        font-size: 0.85rem;
+        color: #aaa;
+    }
+}
+
+/* Status Styles */
+.status {
+    font-weight: 600;
+}
+
+.status.available {
+    color: #2ec4b6;
+}
+
+.status.sold-out,
+.status.cancelled {
+    color: #e71d36;
+}
+
+.status.coming-soon {
+    color: #ff9f1c;
+}
+
+/* 3. Mobile Responsiveness */
+@media (max-width: 768px) {
+    .tour {
+        /* Collapse the 4-column layout into a single vertical stack per item */
+        grid-template-columns: 1fr;
+        border: 1px solid #202020;
+        border-radius: 12px;
+        padding: 10px;
+    }
+
+    /* Hide the headers entirely on mobile */
+    .table-header {
+        display: none;
+    }
+
+    /* Turn cells into distinct block segments inside cards */
+    .table-cell {
+        padding: 8px 10px;
+        border: none;
+    }
+
+    /* Highlight specific components in the card stack */
+    .table-cell.date {
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding-top: 15px;
+    }
+
+    .table-cell.action {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #202020;
+        /* Visual separator between mobile cards */
+    }
+
+    .table-cell.action:last-child {
+        border-bottom: none;
+    }
+}
