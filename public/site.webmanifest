@@ -2,7 +2,7 @@
     "$schema": "https://www.schemastore.org/web-manifest.json",
     "name": "When Light Breaks",
     "description": "Official website for When Light Breaks",
-    "short_name": "WLB",
+    "short_name": "When Light Breaks",
     "start_url": "/",
     "icons": [
         {
