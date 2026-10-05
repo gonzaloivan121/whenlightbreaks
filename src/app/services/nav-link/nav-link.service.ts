@@ -36,18 +36,25 @@ export class NavLinkService {
             url: '/music',
             createdAt: new Date(),
         },
-        {
+        /*{
             id: ParseLinkID('ee33feee-eb3a-4111-bd7d-a7eb20a0d860'),
             label: 'Tour',
             icon: 'ionCalendarNumber',
             url: '/tour',
             createdAt: new Date(),
-        },
+        },*/
         {
             id: ParseLinkID('09f65b01-690d-40b2-91da-f5197d1066b6'),
             label: 'About',
             icon: 'ionInformationCircle',
             url: '/about',
+            createdAt: new Date(),
+        },
+        {
+            id: ParseLinkID('87504d87-effe-4a8a-89d4-7f77aaaa8897'),
+            label: 'Press Kit',
+            icon: 'ionDocumentText',
+            url: '/presskit',
             createdAt: new Date(),
         },
     ];

@@ -25,7 +25,8 @@ export class ArtistService {
         {
             id: ParseArtistID('f5700c5d-b352-4df3-9fde-ce9274bc8304'),
             name: 'When Light Breaks',
-            artistUrl: 'https://example.com/artists/when-light-breaks',
+            artistUrl: 'https://www.whenlightbreaks.com',
+            pictureUrl: 'assets/images/artists/when-light-breaks.webp',
             createdAt: new Date(),
         },
     ];
@@ -43,6 +44,7 @@ export class ArtistService {
                 id: ParseArtistID(crypto.randomUUID()),
                 name: createArtist.name,
                 artistUrl: createArtist.artistUrl,
+                pictureUrl: createArtist.pictureUrl,
                 createdAt: new Date(),
             };
 
@@ -107,6 +109,10 @@ export class ArtistService {
 
             if (updateArtist.artistUrl !== undefined) {
                 artist.artistUrl = updateArtist.artistUrl;
+            }
+
+            if (updateArtist.pictureUrl !== undefined) {
+                artist.pictureUrl = updateArtist.pictureUrl;
             }
 
             artist.updatedAt = new Date();
