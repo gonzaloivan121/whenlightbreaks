@@ -3,12 +3,12 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { HeroComponent } from "@components/hero/hero.component";
-import { ButtonComponent } from "@components/button/button.component";
 import { HeroContentComponent } from "@components/hero/hero-content/hero-content.component";
+import { ButtonComponent } from "@components/button/button.component";
 
 @Component({
     selector: 'notfound-page',
-    imports: [HeroComponent, ButtonComponent, HeroContentComponent],
+    imports: [HeroComponent, HeroContentComponent, ButtonComponent],
     templateUrl: './notfound.page.html',
     styleUrl: './notfound.page.css',
 })
