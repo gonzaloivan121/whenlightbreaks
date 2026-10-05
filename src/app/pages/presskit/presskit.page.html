@@ -1,0 +1,22 @@
+<main class="presskit-page" aria-label="Press Kit page">
+    <hero-component
+        backgroundType="video"
+        [overlay]="false"
+        [fullScreen]="true"
+        videoSrc="assets/videos/hero.mp4"
+        videoPoster="assets/images/hero.webp"
+    >
+        <hero-content-component
+            title="Press Kit"
+            description="Welcome to our Press Kit! Here you'll find all the information you need about our band, music, and upcoming events."
+        >
+            <button-component
+                label="Download Press Kit"
+                variant="dark"
+                icon="ionDownload"
+                title="Download Press Kit"
+                (click)="DownloadPressKit()"
+            ></button-component>
+        </hero-content-component>
+    </hero-component>
+</main>
