@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 
 import { HeroComponent } from '@components/hero/hero.component';
 
-import { MusicSection } from '@sections/music/music.section';
-import { TourSection } from '@sections/tour/tour.section';
+import { YouTubeSection } from '@sections/youtube/youtube.section';
+import { SpotifySection } from '@sections/spotify/spotify.section';
 import { AboutSection } from '@sections/about/about.section';
 
 @Component({
     selector: 'home-page',
     imports: [
         HeroComponent,
-        MusicSection,
-        TourSection,
+        YouTubeSection,
+        SpotifySection,
         AboutSection,
     ],
     templateUrl: './home.page.html',
