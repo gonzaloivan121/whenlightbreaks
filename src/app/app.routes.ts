@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
 
 import { HomePage } from '@pages/home/home.page';
-import { AboutPage } from '@app/pages/about/about.page';
+import { AboutPage } from '@pages/about/about.page';
 import { MusicPage } from '@pages/music/music.page';
 // import { TourPage } from '@pages/tour/tour.page';
 // import { StorePage } from '@pages/store/store.page';
-// import { ProductPage } from './pages/product/product.page';
+// import { ProductPage } from '@pages/product/product.page';
 // import { ContactPage } from '@pages/contact/contact.page';
-import { PressKitPage } from './pages/presskit/presskit.page';
+import { PressKitPage } from '@pages/presskit/presskit.page';
 
 import { NotfoundPage } from '@pages/notfound/notfound.page';
 

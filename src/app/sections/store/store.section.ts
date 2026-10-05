@@ -4,7 +4,7 @@ import { ContainerComponent } from '@components/container/container.component';
 import { TitleComponent } from '@components/title/title.component';
 import { ProductComponent } from '@components/product/product.component';
 
-import { ProductService } from '@app/services/product/product.service';
+import { ProductService } from '@services/product/product.service';
 
 @Component({
     selector: 'store-section',

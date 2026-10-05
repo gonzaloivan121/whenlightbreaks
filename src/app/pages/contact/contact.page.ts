@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { HeroComponent } from '@components/hero/hero.component';
 
-import { ContactSection } from '@app/sections/contact/contact.section';
+import { ContactSection } from '@sections/contact/contact.section';
 
 @Component({
     selector: 'contact-page',

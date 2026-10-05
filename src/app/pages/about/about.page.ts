@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { HeroComponent } from '@components/hero/hero.component';
 
-import { AboutSection } from '@app/sections/about/about.section';
+import { AboutSection } from '@sections/about/about.section';
 
 @Component({
     selector: 'about-page',

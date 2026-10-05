@@ -26,6 +26,9 @@
       "@pages/*": [
         "./src/app/pages/*"
       ],
+      "@pipes/*": [
+        "./src/app/pipes/*"
+      ],
       "@sections/*": [
         "./src/app/sections/*"
       ],

@@ -1,6 +1,6 @@
 import { Service } from '@angular/core';
 
-import { CreateProduct, DeleteProduct, Product, UpdateProduct } from '@app/models/product.model';
+import { CreateProduct, DeleteProduct, Product, UpdateProduct } from '@models/product.model';
 
 import { ProductID, ParseProductID } from '@app/types/product.type';
 

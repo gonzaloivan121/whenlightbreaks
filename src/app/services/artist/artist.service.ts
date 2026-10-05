@@ -1,6 +1,6 @@
 import { Service } from '@angular/core';
 
-import { Artist, CreateArtist, UpdateArtist, DeleteArtist } from '@app/models/artist.model';
+import { Artist, CreateArtist, UpdateArtist, DeleteArtist } from '@models/artist.model';
 
 import { ArtistID, ParseArtistID } from '@app/types/artist.type';
 

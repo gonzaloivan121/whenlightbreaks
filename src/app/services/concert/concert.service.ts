@@ -1,6 +1,6 @@
 import { Service } from '@angular/core';
 
-import { Concert, CreateConcert, DeleteConcert, UpdateConcert } from '@app/models/concert.model';
+import { Concert, CreateConcert, DeleteConcert, UpdateConcert } from '@models/concert.model';
 
 import { ConcertID, ParseConcertID } from '@app/types/concert.type';
 import { ArtistID, ParseArtistID } from '@app/types/artist.type';

@@ -4,7 +4,7 @@ import { ContainerComponent } from '@components/container/container.component';
 import { TitleComponent } from '@components/title/title.component';
 import { SongComponent } from '@components/song/song.component';
 
-import { SongService } from '@app/services/song/song.service';
+import { SongService } from '@services/song/song.service';
 
 @Component({
     selector: 'music-section',

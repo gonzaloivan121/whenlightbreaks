@@ -2,7 +2,7 @@ import { Component, input } from '@angular/core';
 
 import { NgIcon } from '@ng-icons/core';
 
-import { Song } from '@app/models/song.model';
+import { Song } from '@models/song.model';
 
 @Component({
     selector: 'song-component',

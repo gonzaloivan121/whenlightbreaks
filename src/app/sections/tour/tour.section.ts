@@ -1,13 +1,13 @@
 import { Component, inject, computed, resource, signal } from '@angular/core';
 import { DatePipe, TitleCasePipe } from '@angular/common';
 
-import { SeparatePipe } from '@app/pipes/separate/separate.pipe';
+import { SeparatePipe } from '@pipes/separate/separate.pipe';
 
 import { ContainerComponent } from '@components/container/container.component';
 import { TitleComponent } from '@components/title/title.component';
 import { ButtonComponent } from "@components/button/button.component";
 
-import { ConcertService } from '@app/services/concert/concert.service';
+import { ConcertService } from '@services/concert/concert.service';
 
 @Component({
     selector: 'tour-section',

@@ -1,6 +1,6 @@
 import { Service } from '@angular/core';
 
-import { Link, CreateLink, DeleteLink, UpdateLink } from '@app/models/link.model';
+import { Link, CreateLink, DeleteLink, UpdateLink } from '@models/link.model';
 
 import { LinkID, ParseLinkID } from '@app/types/link.type';
 

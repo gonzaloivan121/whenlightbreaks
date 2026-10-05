@@ -1,6 +1,6 @@
 import { Service } from '@angular/core';
 
-import { CreateOrder, DeleteOrder, Order, UpdateOrder } from '@app/models/order.model';
+import { CreateOrder, DeleteOrder, Order, UpdateOrder } from '@models/order.model';
 
 import { OrderID, ParseOrderID } from '@app/types/order.type';
 import { UserID } from '@app/types/user.type';

@@ -1,6 +1,6 @@
 import { Service } from '@angular/core';
 
-import { Song, CreateSong, DeleteSong, UpdateSong } from '@app/models/song.model';
+import { Song, CreateSong, DeleteSong, UpdateSong } from '@models/song.model';
 
 import { SongID, ParseSongID } from '@app/types/song.type';
 import { AlbumID, ParseAlbumID } from '@app/types/album.type';

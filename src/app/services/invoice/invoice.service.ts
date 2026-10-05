@@ -1,6 +1,6 @@
 import { Service } from '@angular/core';
 
-import { CreateInvoice, DeleteInvoice, Invoice, UpdateInvoice } from '@app/models/invoice.model';
+import { CreateInvoice, DeleteInvoice, Invoice, UpdateInvoice } from '@models/invoice.model';
 
 import { InvoiceID, ParseInvoiceID } from '@app/types/invoice.type';
 import { UserID } from '@app/types/user.type';

@@ -2,11 +2,11 @@ import { Component, computed, inject, input, resource, signal } from '@angular/c
 import { CurrencyPipe } from '@angular/common';
 import { Router } from '@angular/router';
 
-import { ContainerComponent } from '@app/components/container/container.component';
-import { TitleComponent } from '@app/components/title/title.component';
-import { ButtonComponent } from '@app/components/button/button.component';
+import { ContainerComponent } from '@components/container/container.component';
+import { TitleComponent } from '@components/title/title.component';
+import { ButtonComponent } from '@components/button/button.component';
 
-import { ProductService } from '@app/services/product/product.service';
+import { ProductService } from '@services/product/product.service';
 
 import { ProductID } from '@app/types/product.type';
 

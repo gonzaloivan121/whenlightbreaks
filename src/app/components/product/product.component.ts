@@ -1,8 +1,9 @@
 import { Component, inject, input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Product } from '@app/models/product.model';
 
 import { ButtonComponent } from '@components/button/button.component';
+
+import { Product } from '@models/product.model';
 
 @Component({
     selector: 'product-component',

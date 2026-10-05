@@ -1,6 +1,6 @@
 import { Service } from '@angular/core';
 
-import { Album, CreateAlbum, DeleteAlbum, UpdateAlbum } from '@app/models/album.model';
+import { Album, CreateAlbum, DeleteAlbum, UpdateAlbum } from '@models/album.model';
 
 import { AlbumID, ParseAlbumID } from '@app/types/album.type';
 import { ArtistID, ParseArtistID } from '@app/types/artist.type';
