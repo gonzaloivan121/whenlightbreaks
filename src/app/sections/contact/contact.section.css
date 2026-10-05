@@ -1,0 +1,40 @@
+.contact {
+    .contact-text {
+        p {
+            font-size: 16px;
+            line-height: 26px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            margin-bottom: 1.5em;
+            text-align: justify;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: var(--dark-hover-fg);
+            }
+        }
+
+        h2 {
+            font-size: 24px;
+            line-height: 32px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .contact-text p {
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+}
