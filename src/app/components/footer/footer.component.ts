@@ -1,9 +1,7 @@
 import { Component, computed, inject, input, resource } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
-import { NgIcon, provideIcons } from '@ng-icons/core';
-import * as ionIcons from '@ng-icons/ionicons';
-import * as simpleIcons from '@ng-icons/simple-icons';
+import { NgIcon } from '@ng-icons/core';
 
 import { ContainerComponent } from '@components/container/container.component';
 
@@ -16,7 +14,6 @@ import { StreamingLinkService } from '@services/streaming-link/streaming-link.se
     imports: [RouterLink, RouterLinkActive, NgIcon, ContainerComponent],
     templateUrl: './footer.component.html',
     styleUrl: './footer.component.css',
-    viewProviders: [provideIcons({ ...ionIcons, ...simpleIcons })],
 })
 export class FooterComponent {
     private readonly navLinkService: NavLinkService = inject(NavLinkService);

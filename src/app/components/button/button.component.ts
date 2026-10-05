@@ -1,7 +1,6 @@
 import { Component, computed, input, output } from '@angular/core';
 
-import { NgIcon, provideIcons } from '@ng-icons/core';
-import * as ionIcons from '@ng-icons/ionicons';
+import { NgIcon } from '@ng-icons/core';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark' | 'link' | 'outline-primary' | 'outline-secondary' | 'outline-tertiary' | 'outline-danger' | 'outline-success' | 'outline-warning' | 'outline-info' | 'outline-light' | 'outline-dark';
 export type ButtonSize = 'small' | 'medium' | 'large';
@@ -12,7 +11,6 @@ export type ButtonIconPosition = 'start' | 'end';
     imports: [NgIcon],
     templateUrl: './button.component.html',
     styleUrl: './button.component.css',
-    viewProviders: [provideIcons({ ...ionIcons })],
 })
 export class ButtonComponent {
     label = input<string>('');

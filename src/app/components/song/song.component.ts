@@ -1,7 +1,6 @@
 import { Component, input } from '@angular/core';
 
-import { NgIcon, provideIcons } from '@ng-icons/core';
-import { ionEnterOutline } from '@ng-icons/ionicons';
+import { NgIcon } from '@ng-icons/core';
 
 import { Song } from '@app/models/song.model';
 
@@ -10,7 +9,6 @@ import { Song } from '@app/models/song.model';
     imports: [NgIcon],
     templateUrl: './song.component.html',
     styleUrl: './song.component.css',
-    viewProviders: [provideIcons({ ionEnterOutline })],
 })
 export class SongComponent {
     song = input.required<Song>();

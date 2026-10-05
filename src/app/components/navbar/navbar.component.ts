@@ -1,8 +1,7 @@
 import { Component, computed, inject, input, resource } from '@angular/core';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 
-import { NgIcon, provideIcons } from "@ng-icons/core";
-import * as ionIcons from '@ng-icons/ionicons';
+import { NgIcon } from "@ng-icons/core";
 
 import { NavLinkService } from '@services/nav-link/nav-link.service';
 import { SocialLinkService } from '@services/social-link/social-link.service';
@@ -12,7 +11,6 @@ import { SocialLinkService } from '@services/social-link/social-link.service';
     imports: [RouterLink, RouterLinkActive, NgIcon],
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.css',
-    viewProviders: [provideIcons({ ...ionIcons })],
 })
 export class NavbarComponent {
     private readonly navLinkService: NavLinkService = inject(NavLinkService);
