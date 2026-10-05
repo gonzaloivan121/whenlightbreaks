@@ -32,6 +32,14 @@ export interface Artist {
     artistUrl: string;
 
     /**
+     * The URL for picture of the the `Artist`.
+     *
+     * @type {string}
+     * @memberof Artist
+     */
+    pictureUrl: string;
+
+    /**
      * The date and time when the `Artist` was created.
      *
      * @type {Date}
@@ -54,7 +62,8 @@ export interface Artist {
  * @example
  * const createArtist: CreateArtist = {
  *     name: "Artist Name",
- *     artistUrl: "https://example.com"
+ *     artistUrl: "https://example.com",
+ *     pictureUrl: "https://example.com/picture.jpg"
  * };
  * @export
  * @type {CreateArtist}
@@ -68,7 +77,8 @@ export type CreateArtist = Omit<Artist, 'id' | 'createdAt' | 'updatedAt'>;
  * const updateArtist: UpdateArtist = {
  *     id: "123e4567-e89b-12d3-a456-426614174000",
  *     name: "Artist Name",
- *     artistUrl: "https://example.com"
+ *     artistUrl: "https://example.com",
+ *     pictureUrl: "https://example.com/picture.jpg"
  * };
  * @export
  * @type {UpdateArtist}
