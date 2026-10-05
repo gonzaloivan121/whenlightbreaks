@@ -1,4 +1,4 @@
-import { Component, inject, computed, resource } from '@angular/core';
+import { Component, inject, computed, resource, signal } from '@angular/core';
 import { DatePipe, TitleCasePipe } from '@angular/common';
 
 import { SeparatePipe } from '@app/pipes/separate/separate.pipe';
@@ -16,6 +16,8 @@ import { ConcertService } from '@app/services/concert/concert.service';
     styleUrl: './tour.section.css',
 })
 export class TourSection {    
+    title = signal<string>('Tour');
+    
     private readonly concertService: ConcertService = inject(ConcertService);
 
     concertsResource = resource({

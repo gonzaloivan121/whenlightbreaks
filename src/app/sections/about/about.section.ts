@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import { ContainerComponent } from '@components/container/container.component';
 import { TitleComponent } from '@components/title/title.component';
@@ -9,4 +9,6 @@ import { TitleComponent } from '@components/title/title.component';
     templateUrl: './about.section.html',
     styleUrl: './about.section.css',
 })
-export class AboutSection {}
+export class AboutSection {
+    title = signal<string>('About');
+}

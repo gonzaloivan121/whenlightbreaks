@@ -6,7 +6,7 @@
             word-wrap: break-word;
             overflow-wrap: break-word;
             hyphens: auto;
-            margin-bottom: 1.5em;
+            margin-bottom: 1.75em;
             text-align: justify;
         }
 
@@ -27,14 +27,21 @@
         object-fit: cover;
         float: right;
         margin-left: 1.5em;
-        margin-bottom: 1.5em;
+        margin-bottom: 1.75em;
         width: 50%;
         border-radius: 12px;
+        cursor: pointer;
+
+        transition: transform 0.15s ease-in-out;
 
         &.left {
             float: left;
             margin-right: 1.5em;
             margin-left: 0;
+        }
+
+        &:hover {
+            transform: scale(1.01);
         }
     }
 

@@ -1,4 +1,4 @@
-import { Component, computed, inject, resource } from '@angular/core';
+import { Component, computed, inject, resource, signal } from '@angular/core';
 
 import { ContainerComponent } from '@components/container/container.component';
 import { TitleComponent } from '@components/title/title.component';
@@ -13,6 +13,8 @@ import { SongService } from '@app/services/song/song.service';
     styleUrl: './music.section.css',
 })
 export class MusicSection {
+    title = signal<string>('Music');
+    
     private readonly songService: SongService = inject(SongService);
 
     songsResource = resource({

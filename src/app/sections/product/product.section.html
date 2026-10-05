@@ -1,14 +1,26 @@
-<container-component>
-    <title-component title="Product" color="primary" size="large" [centered]="true"></title-component>
+<container-component size="large">
+    <title-component [title]="title()" color="primary" size="large" [centered]="true"></title-component>
 
-    <div class="product">
-        <img class="product-image" [src]="product()?.imageUrl" alt="{{ product()?.name }}">
-
-        <div class="product-details">
-            <h2 class="product-name">{{ product()?.name }}</h2>
-            <p class="product-price">{{ product()?.price | currency }}</p>
-            <button-component label="Add to Cart" variant="light" size="medium" icon="ionCart" [block]="true" class="product-buy" (onClick)="AddToCart()"></button-component>
-            <p class="product-description">{{ product()?.description }}</p>
+    @if (hasProduct()) {
+        <div class="product">
+            <img class="product-image" [src]="product()?.imageUrl" alt="{{ product()?.name }}">
+    
+            <div class="product-details">
+                <h2 class="product-name">{{ product()?.name }}</h2>
+                <p class="product-price">{{ product()?.price | currency }}</p>
+                <button-component label="Add to Cart" variant="light" size="medium" icon="ionCart" [block]="true" class="product-buy" (onClick)="AddToCart()"></button-component>
+                <p class="product-description">{{ product()?.description }}</p>
+            </div>
         </div>
-    </div>
+    } @else {
+        <div class="no-product">
+            <p>The product you are looking for does not exist.</p>
+            <p>Please check the URL or return to the home page.</p>
+
+            <div class="actions">
+                <button-component label="Go Home" variant="dark" icon="ionHome" [block]="true" (onClick)="GoHome()"></button-component>
+                <button-component label="Go To Store" variant="light" icon="ionBasket" [block]="true" iconPosition="end" (onClick)="GoToStore()"></button-component>
+            </div>
+        </div>
+    }
 </container-component>

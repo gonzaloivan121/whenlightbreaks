@@ -1,18 +1,11 @@
-<container-component>
-    <title-component title="Music" color="primary" size="large" [centered]="true"></title-component>
+<container-component size="large">
+    <title-component [title]="title()" color="primary" size="large" [centered]="true"></title-component>
 
-    @if (hasSongs()) {
+    @if (hasSongs() && songs().length > 0) {
         <div class="music">
             @for (song of songs(); track song.id) {
                 <song-component [song]="song"></song-component>
             }
         </div>
     }
-
-    <div class="spotify">
-        <iframe data-testid="embed-iframe" style="border-radius:12px"
-            src="https://open.spotify.com/embed/artist/5SzFGk8EJoHFi4JuJhHNZe?utm_source=generator&theme=0&si=92a65e3cc4ac40cd"
-            width="100%" height="512" frameBorder="0" title="Spotify"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    </div>
 </container-component>

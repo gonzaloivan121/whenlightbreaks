@@ -42,3 +42,22 @@
         }
     }
 }
+
+.no-product {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+
+    p {
+        margin: 0.5em 0;
+    }
+
+    .actions {
+        margin-top: 2.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
