@@ -1,0 +1,17 @@
+.youtube {
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    transition: transform 0.15s ease-in-out;
+
+    iframe {
+        aspect-ratio: 16 / 9;
+        width: 100% !important;
+    }
+
+    &:hover {
+        transform: scale(1.01);
+    }
+}
