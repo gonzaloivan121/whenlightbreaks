@@ -5,23 +5,30 @@ import { SeparatePipe } from '@pipes/separate/separate.pipe';
 
 import { ContainerComponent } from '@components/container/container.component';
 import { TitleComponent } from '@components/title/title.component';
-import { ButtonComponent } from "@components/button/button.component";
+import { ButtonComponent } from '@components/button/button.component';
 
 import { ConcertService } from '@services/concert/concert.service';
 
 @Component({
     selector: 'tour-section',
-    imports: [ButtonComponent, DatePipe, SeparatePipe, TitleCasePipe, ContainerComponent, TitleComponent],
+    imports: [
+        ButtonComponent,
+        DatePipe,
+        SeparatePipe,
+        TitleCasePipe,
+        ContainerComponent,
+        TitleComponent,
+    ],
     templateUrl: './tour.section.html',
     styleUrl: './tour.section.css',
 })
-export class TourSection {    
+export class TourSection {
     title = signal<string>('Tour');
-    
+
     private readonly concertService: ConcertService = inject(ConcertService);
 
     concertsResource = resource({
-        loader: () => this.concertService.GetConcerts()
+        loader: () => this.concertService.GetConcerts(),
     });
 
     hasConcerts = computed(() => this.concertsResource.hasValue());

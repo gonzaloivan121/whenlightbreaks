@@ -23,7 +23,7 @@
                         <p class="location">{{ concert.venue }}, {{ concert.city }}, {{ concert.state }}, {{ concert.country }}</p>
                     }
                 </div>
-                <div class="table-cell status {{ concert.status }}">{{ concert.status | separate:'-' | titlecase }}</div>
+                <div class="table-cell status {{ concert.status }}">{{ concert.status | separate: { delimiter: '-', joiner: ' ' } | titlecase }}</div>
                 <div class="table-cell action">
                     <button-component
                         label="Tickets"
