@@ -1,0 +1,43 @@
+.highlight {
+    --columns: 2;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+    gap: 1.5em;
+    width: 100%;
+
+    @media (max-width: 480px) {
+        --columns: 1;
+    }
+
+    .highlight-image {
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+        height: auto;
+        border-radius: 12px;
+        transition: transform 0.15s ease-in-out;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+
+    .highlight-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        .highlight-block {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            .highlight-title {
+                font-size: 1.5em;
+                font-weight: bold;
+                color: var(--color-primary);
+            }
+        }
+    }
+}
