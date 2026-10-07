@@ -22,6 +22,7 @@
         "@ng-icons/heroicons": "^34.0.0",
         "@ng-icons/ionicons": "^34.0.0",
         "@ng-icons/simple-icons": "^34.0.0",
+        "dotenv": "^18.0.6",
         "rxjs": "~7.8.0",
         "tslib": "^2.3.0"
     },
