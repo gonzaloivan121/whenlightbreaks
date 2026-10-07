@@ -54,7 +54,7 @@ export class NavLinkService {
             id: ParseLinkID('87504d87-effe-4a8a-89d4-7f77aaaa8897'),
             label: 'Press Kit',
             icon: 'ionDocumentText',
-            url: '/presskit',
+            url: '/press-kit',
             createdAt: new Date(),
         },
     ];
