@@ -104,5 +104,25 @@
     ],
     "theme_color": "#000000",
     "background_color": "#000000",
-    "display": "standalone"
+    "display": "standalone",
+    "shortcuts": [
+        {
+            "name": "Music",
+            "short_name": "Music",
+            "description": "The music page for When Light Breaks. Here you can find all of the music that When Light Breaks has released.",
+            "url": "/music"
+        },
+        {
+            "name": "About",
+            "short_name": "About",
+            "description": "The about page for When Light Breaks. Here you can find out more about the band and their journey.",
+            "url": "/about"
+        },
+        {
+            "name": "Press Kit",
+            "short_name": "Press Kit",
+            "description": "The press kit for When Light Breaks. Here you can find all the information and media assets about the band.",
+            "url": "/press-kit"
+        }
+    ]
 }
