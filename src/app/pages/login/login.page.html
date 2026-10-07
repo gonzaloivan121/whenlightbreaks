@@ -1,1 +1,51 @@
-<p>login.page works!</p>
+<main class="login-page" aria-label="Login page">
+    <hero-component
+        backgroundType="video"
+        [overlay]="false"
+        [fullScreen]="true"
+        videoSrc="assets/videos/hero.mp4"
+        videoPoster="assets/images/hero.webp"
+    >
+        <hero-content-component
+            title="Login"
+            description="Please enter your credentials to access your account."
+        >
+            <card-component>
+                <card-header-component>
+                    <h2>Login</h2>
+                </card-header-component>
+
+                <card-body-component>
+                    <form (ngSubmit)="OnSubmit()">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" [formField]="loginForm.username" placeholder="Enter your username" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" [formField]="loginForm.password" placeholder="Enter your password" />
+                        </div>
+
+                        <div class="form-group">
+                            <input type="checkbox" id="remember" [formField]="loginForm.remember" />
+                            <label for="remember">Remember Me</label>
+                        </div>
+
+                        <a href="/forgot-password" class="forgot-password-link">Forgot Password?</a>
+
+                        <button-component
+                            label="Login"
+                            variant="dark"
+                            icon="ionLogIn"
+                            title="Login"
+                            type="submit"
+                            [block]="true"
+                            (onClick)="OnSubmit()"
+                        ></button-component>
+                    </form>
+                </card-body-component>
+            </card-component>
+        </hero-content-component>
+    </hero-component>
+</main>
