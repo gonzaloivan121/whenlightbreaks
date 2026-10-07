@@ -41,6 +41,14 @@ export interface User {
     username: string;
 
     /**
+     * The password of the `User`.
+     *
+     * @type {string}
+     * @memberof User
+     */
+    password: string;
+
+    /**
      * The email address of the `User`.
      *
      * @type {Email}

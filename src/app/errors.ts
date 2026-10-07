@@ -67,3 +67,16 @@ export class CantUpdateError extends BaseError {
         super(message);
     }
 }
+
+/**
+ * Thrown when an attempt is made to access or delete a resource that cannot be accessed or deleted due to business rules or constraints.
+ *
+ * @export
+ * @class UnauthorizedError
+ * @extends {BaseError}
+ */
+export class UnauthorizedError extends BaseError {
+    constructor(message: string) {
+        super(message);
+    }
+}

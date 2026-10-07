@@ -5,7 +5,9 @@ import { CreateUser, DeleteUser, UpdateUser, User } from '@models/user.model';
 import { ParseUserID, UserID } from '@app/types/user.type';
 import { Email } from '@app/types/email.type';
 
-import { AlreadyExistsError, NotFoundError } from '@app/errors';
+import { Password } from '@helpers/password/password.helper';
+
+import { AlreadyExistsError, NotFoundError, UnauthorizedError } from '@app/errors';
 
 /**
  * Service for managing `User` data.
@@ -28,6 +30,7 @@ export class UserService {
             firstName: 'John',
             lastName: 'Doe',
             username: 'johndoe',
+            password: 'c2VjcmV0',
             email: 'johndoe@example.com',
             phone: '+01234567890',
             pictureUrl: 'https://picsum.photos/512/512',
@@ -68,6 +71,7 @@ export class UserService {
                 firstName: createUser.firstName,
                 lastName: createUser.lastName,
                 username: createUser.username,
+                password: Password.Hash(createUser.password),
                 email: createUser.email,
                 phone: createUser.phone,
                 pictureUrl: createUser.pictureUrl,
@@ -202,6 +206,10 @@ export class UserService {
                 user.username = updateUser.username;
             }
 
+            if (updateUser.password !== undefined) {
+                user.password = Password.Hash(updateUser.password);
+            }
+
             if (updateUser.email !== undefined) {
                 user.email = updateUser.email;
             }
@@ -247,6 +255,7 @@ export class UserService {
      * @param {string} username - The username of the `User` attempting to log in.
      * @param {string} password - The password of the `User` attempting to log in.
      * @throws {NotFoundError} If the `User` instance with the specified `username` does not exist.
+     * @throws {UnauthorizedError} If the provided password does not match the stored hashed password for the `User`.
      * @returns {Promise<User>} A promise that resolves with the logged-in `User` instance.
      * @memberof UserService
      */
@@ -259,7 +268,10 @@ export class UserService {
                 return;
             }
 
-            // For demonstration purposes, we are not checking the password.
+            if (!Password.Compare(password, user.password)) {
+                reject(new UnauthorizedError(`Invalid password for user '${username}'.`));
+                return;
+            }
 
             resolve(user);
         });
