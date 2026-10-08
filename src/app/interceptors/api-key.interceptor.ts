@@ -4,18 +4,13 @@ import { inject } from '@angular/core';
 import { AuthService } from '@services/auth/auth.service';
 
 /**
- * An interceptor that injects the API key from the `AuthService` if the request method is not GET.
+ * An interceptor that injects the API key from the `AuthService`.
  * 
  * @param {HttpRequest} req - The request to intercept.
  * @param {HttpHandlerFn} next - The function to move to the next request.
  * @returns 
  */
 export const apiKeyInterceptor: HttpInterceptorFn = (req, next) => {
-    // Pass the request through immediately if it's a GET request.
-    if (req.method === 'GET') {
-        return next(req);
-    }
-
     // Inject the AuthService to get the current user's API key.
     const authService = inject(AuthService);
     const apiKey = authService.GetCurrentApiKey();
