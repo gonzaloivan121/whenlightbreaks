@@ -8,7 +8,9 @@
             <div class="product-details">
                 <h2 class="product-name">{{ product()?.name }}</h2>
                 <p class="product-price">{{ product()?.price | currency }}</p>
-                <button-component label="Add to Cart" variant="light" size="medium" icon="ionCart" [block]="true" class="product-buy" (onClick)="AddToCart()"></button-component>
+                <button-component label="Add to Cart" variant="light" size="medium" [icon]="true" [block]="true" class="product-buy" (onClick)="AddToCart()">
+                    <ng-icon name="ionCart"/>
+                </button-component>
                 <p class="product-description">{{ product()?.description }}</p>
             </div>
         </div>
@@ -18,8 +20,12 @@
             <p>Please check the URL or return to the home page.</p>
 
             <div class="actions">
-                <button-component label="Go Home" variant="dark" icon="ionHome" [block]="true" (onClick)="GoHome()"></button-component>
-                <button-component label="Go To Store" variant="light" icon="ionBasket" [block]="true" iconPosition="end" (onClick)="GoToStore()"></button-component>
+                <button-component label="Go Home" variant="dark" [icon]="true" [block]="true" (onClick)="GoHome()">
+                    <ng-icon name="ionHome" />
+                </button-component>
+                <button-component label="Go To Store" variant="light" [icon]="true" [block]="true" (onClick)="GoToStore()">
+                    <ng-icon name="ionBasket" />
+                </button-component>
             </div>
         </div>
     }

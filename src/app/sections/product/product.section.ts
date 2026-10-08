@@ -2,6 +2,8 @@ import { Component, computed, inject, input, resource, signal } from '@angular/c
 import { CurrencyPipe } from '@angular/common';
 import { Router } from '@angular/router';
 
+import { NgIcon } from '@ng-icons/core';
+
 import { ContainerComponent } from '@components/container/container.component';
 import { TitleComponent } from '@components/title/title.component';
 import { ButtonComponent } from '@components/button/button.component';
@@ -12,7 +14,7 @@ import { ProductID } from '@app/types/product.type';
 
 @Component({
     selector: 'product-section',
-    imports: [ContainerComponent, TitleComponent, CurrencyPipe, ButtonComponent],
+    imports: [ContainerComponent, TitleComponent, CurrencyPipe, ButtonComponent, NgIcon],
     templateUrl: './product.section.html',
     styleUrl: './product.section.css',
 })

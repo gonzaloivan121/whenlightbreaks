@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, resource } from '@angular/core';
+import { Component, computed, inject, resource } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { NgIcon } from '@ng-icons/core';

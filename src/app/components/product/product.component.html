@@ -13,9 +13,11 @@
                 variant="light"
                 size="small"
                 label="Buy"
-                icon="ionBasket"
+                [icon]="true"
                 (onClick)="BuyProduct()"
-            ></button-component>
+            >
+                <ng-icon name="ionBasket" />
+            </button-component>
         </div>
     </div>
 </div>

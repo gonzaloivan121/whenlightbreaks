@@ -1,13 +1,15 @@
 import { Component, inject, input } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { NgIcon } from '@ng-icons/core';
+
 import { ButtonComponent } from '@components/button/button.component';
 
 import { Product } from '@models/product.model';
 
 @Component({
     selector: 'product-component',
-    imports: [ButtonComponent],
+    imports: [ButtonComponent, NgIcon],
     templateUrl: './product.component.html',
     styleUrl: './product.component.css',
 })

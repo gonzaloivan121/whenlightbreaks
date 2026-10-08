@@ -1,10 +1,12 @@
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 
+import { NgIcon } from '@ng-icons/core';
+
 import { ButtonComponent } from '@components/button/button.component';
 
 @Component({
     selector: 'scroll-component',
-    imports: [ButtonComponent],
+    imports: [ButtonComponent, NgIcon],
     templateUrl: './scroll.component.html',
     styleUrl: './scroll.component.css',
 })

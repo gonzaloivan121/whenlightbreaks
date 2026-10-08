@@ -2,13 +2,15 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
+import { NgIcon } from '@ng-icons/core';
+
 import { HeroComponent } from "@components/hero/hero.component";
 import { HeroContentComponent } from "@components/hero/hero-content/hero-content.component";
 import { ButtonComponent } from "@components/button/button.component";
 
 @Component({
     selector: 'notfound-page',
-    imports: [HeroComponent, HeroContentComponent, ButtonComponent],
+    imports: [HeroComponent, HeroContentComponent, ButtonComponent, NgIcon],
     templateUrl: './notfound.page.html',
     styleUrl: './notfound.page.css',
 })

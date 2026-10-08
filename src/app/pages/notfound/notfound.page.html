@@ -11,8 +11,13 @@
             description="The page you are looking for does not exist. Please check the URL or return to the home page."
         >
             <div class="hero-actions" role="group" aria-label="Not Found actions">
-                <button-component label="Go Home" variant="dark" icon="ionHome" (onClick)="GoHome()" title="Go Home"></button-component>
-                <button-component label="Go Back" variant="light" icon="ionArrowBack" iconPosition="end" (onClick)="GoBack()" title="Go Back"></button-component>
+                <button-component label="Go Home" variant="dark" [icon]="true" (onClick)="GoHome()" title="Go Home">
+                    <ng-icon name="ionHome" />
+                </button-component>
+
+                <button-component label="Go Back" variant="light" [icon]="true" (onClick)="GoBack()" title="Go Back">
+                    <ng-icon name="ionArrowBack" />
+                </button-component>
             </div>
         </hero-content-component>
     </hero-component>

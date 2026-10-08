@@ -13,10 +13,12 @@
             <button-component
                 label="Download Press Kit"
                 variant="dark"
-                icon="ionDownload"
+                [icon]="true"
                 title="Download Press Kit"
                 (click)="DownloadPressKit()"
-            ></button-component>
+            >
+                <ng-icon name="ionDownload" />
+            </button-component>
         </hero-content-component>
     </hero-component>
 </main>

@@ -252,10 +252,10 @@
     }
 
     & .icon-start {
-        margin-right: var(--btn-icon-spacing);
+        margin-left: var(--btn-icon-spacing);
     }
 
     & .icon-end {
-        margin-left: var(--btn-icon-spacing);
+        margin-right: var(--btn-icon-spacing);
     }
 }

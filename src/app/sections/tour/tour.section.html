@@ -27,14 +27,16 @@
                 <div class="table-cell action">
                     <button-component
                         label="Tickets"
-                        icon="ionTicket"
+                        [icon]="true"
                         variant="light"
                         size="small"
                         [disabled]="disableButton"
                         [block]="true"
                         (onClick)="BuyTickets(concert.ticketsUrl)"
                         title="Tickets"
-                    ></button-component>
+                    >
+                        <ng-icon name="ionTicket" />
+                    </button-component>
                 </div>
             }
         </div>

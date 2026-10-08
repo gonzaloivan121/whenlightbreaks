@@ -1,6 +1,8 @@
 import { Component, inject, computed, resource, signal } from '@angular/core';
 import { DatePipe, TitleCasePipe } from '@angular/common';
 
+import { NgIcon } from '@ng-icons/core';
+
 import { SeparatePipe } from '@pipes/separate/separate.pipe';
 
 import { ContainerComponent } from '@components/container/container.component';
@@ -18,6 +20,7 @@ import { ConcertService } from '@services/concert/concert.service';
         TitleCasePipe,
         ContainerComponent,
         TitleComponent,
+        NgIcon,
     ],
     templateUrl: './tour.section.html',
     styleUrl: './tour.section.css',

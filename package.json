@@ -19,7 +19,6 @@
         "@angular/platform-browser": "^22.2.1",
         "@angular/router": "^22.2.1",
         "@ng-icons/core": "^34.0.0",
-        "@ng-icons/heroicons": "^34.0.0",
         "@ng-icons/ionicons": "^34.0.0",
         "@ng-icons/simple-icons": "^34.0.0",
         "dotenv": "^18.0.6",

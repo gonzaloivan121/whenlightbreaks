@@ -1,11 +1,14 @@
+@let isIconStart = icon() && iconPosition() === 'start';
+@let isIconEnd = icon() && iconPosition() === 'end';
+
 <button type="button" [class]="buttonClass()" [class.disabled]="disabled()" [disabled]="disabled()" (click)="onClick.emit()">
-    @if (icon() && iconPosition() === 'start') {
-        <ng-icon [name]="icon()" class="icon-start" />
+    @if (isIconStart) {
+        <ng-content select="ng-icon"></ng-content>
     }
 
-    {{ label() }}
+    <span [class.icon-start]="isIconStart" [class.icon-end]="isIconEnd">{{ label() }}</span>
 
-    @if (icon() && iconPosition() === 'end') {
-        <ng-icon [name]="icon()" class="icon-end" />
+    @if (isIconEnd) {
+        <ng-content select="ng-icon"></ng-content>
     }
 </button>

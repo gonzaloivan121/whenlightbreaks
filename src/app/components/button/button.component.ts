@@ -19,7 +19,7 @@ export class ButtonComponent {
     rounded = input<boolean>(false);
     class = input<string>('');
     disabled = input<boolean>(false);
-    icon = input<string>('');
+    icon = input<boolean>(false);
     iconPosition = input<ButtonIconPosition>('start');
     block = input<boolean>(false);
 
