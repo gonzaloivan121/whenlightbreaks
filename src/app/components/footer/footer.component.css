@@ -49,10 +49,22 @@
             justify-content: flex-start;
 
             a {
-                color: var(--black-fg);
+                text-decoration: none;
+                color: var(--navbar-link-color);
+                font-weight: 300;
                 display: block;
                 font-size: 1em;
                 text-decoration: none;
+                transition: color 0.2s ease-in-out;
+
+                &:hover,
+                &:focus {
+                    color: var(--navbar-link-hover-color);
+                }
+
+                &.active {
+                    color: var(--navbar-link-active-color);
+                }
 
                 &:hover,
                 &:focus,
