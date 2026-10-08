@@ -33,7 +33,6 @@ export class UserService {
             password: 'c2VjcmV0',
             email: 'johndoe@example.com',
             phone: '+01234567890',
-            pictureUrl: 'https://picsum.photos/512/512',
             createdAt: new Date(),
         },
     ];
@@ -74,7 +73,6 @@ export class UserService {
                 password: Password.Hash(createUser.password),
                 email: createUser.email,
                 phone: createUser.phone,
-                pictureUrl: createUser.pictureUrl,
                 createdAt: new Date(),
             };
 
@@ -216,10 +214,6 @@ export class UserService {
 
             if (updateUser.phone !== undefined) {
                 user.phone = updateUser.phone;
-            }
-
-            if (updateUser.pictureUrl !== undefined) {
-                user.pictureUrl = updateUser.pictureUrl;
             }
 
             user.updatedAt = new Date();

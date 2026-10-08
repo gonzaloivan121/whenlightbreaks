@@ -65,14 +65,6 @@ export interface User {
     phone: string;
 
     /**
-     * The URL of the `User`'s profile picture.
-     *
-     * @type {string}
-     * @memberof User
-     */
-    pictureUrl: string;
-
-    /**
      * The date and time when the `User` was created.
      *
      * @type {Date}
@@ -90,6 +82,19 @@ export interface User {
 }
 
 /**
+ * Type that represents a `LoginUser` object, which is used to login a `User` into the system.
+ * 
+ * @example
+ * const loginUser: LoginUser = {
+ *     username: "johndoe",
+ *     password: "secret"
+ * };
+ * @export
+ * @type {LoginUser}
+ */
+export type LoginUser = Pick<User, 'username' | 'password'>;
+
+/**
  * Type that represents a `CreateUser` object, which is used to create a new `User`.
  *
  * @example
@@ -98,8 +103,7 @@ export interface User {
  *     lastName: "Doe",
  *     username: "johndoe",
  *     email: "johndoe@example.com",
- *     phone: "+01234567890",
- *     pictureUrl: "https://example.com/profile.jpg"
+ *     phone: "+01234567890"
  * };
  * @export
  * @type {CreateUser}
@@ -116,8 +120,7 @@ export type CreateUser = Omit<User, 'id' | 'createdAt' | 'updatedAt'>;
  *     lastName: "Doe",
  *     username: "johndoe",
  *     email: "johndoe@example.com",
- *     phone: "+01234567890",
- *     pictureUrl: "https://example.com/profile.jpg"
+ *     phone: "+01234567890"
  * };
  * @export
  * @type {UpdateUser}
