@@ -14,11 +14,14 @@ export enum EndpointRoute {
     ApiKey = 'api-key',
     Artist = 'artist',
     Concert = 'concert',
+    Invoice = 'invoice',
     NavigationLink = 'navigation-link',
+    Order = 'order',
     Product = 'product',
     SocialLink = 'social-link',
     Song = 'song',
     StreamingLink = 'streaming-link',
+    User = 'user',
 }
 
 /**
@@ -58,6 +61,10 @@ export class ApiService {
         dependantId: string,
     ) {
         return this.Request<T>('GET', `${this.baseUrl}/${route}s/${dependantRoute}/${dependantId}`);
+    }
+
+    public GetByField<T>(route: EndpointRoute, fieldName: string, fieldValue: string) {
+        return this.Request<T>('GET', `${this.baseUrl}/${route}s/${fieldName}/${fieldValue}`);
     }
 
     public Update<T>(route: EndpointRoute, id: string, data: Object) {
