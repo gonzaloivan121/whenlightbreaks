@@ -1,4 +1,5 @@
-import { Component, computed, inject, resource, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 import { ContainerComponent } from '@components/container/container.component';
 import { TitleComponent } from '@components/title/title.component';
@@ -17,10 +18,5 @@ export class StoreSection {
 
     private readonly productService: ProductService = inject(ProductService);
 
-    productsResource = resource({
-        loader: () => this.productService.GetProducts(),
-    });
-
-    hasProducts = computed(() => this.productsResource.hasValue());
-    products = computed(() => this.productsResource.value() ?? []);
+    productsSignal = toSignal(this.productService.GetProducts());
 }

@@ -1,14 +1,16 @@
+@let concerts = concertsSignal() ?? [];
+
 <container-component size="large">
     <title-component [title]="title()" color="primary" size="large" [centered]="true"></title-component>
 
-    @if (hasConcerts() && concerts().length > 0) {
+    @if (concerts.length > 0) {
         <div class="tour">
             <div class="table-header">Date</div>
             <div class="table-header">Details</div>
             <div class="table-header">Status</div>
             <div class="table-header">Tickets</div>
     
-            @for (concert of concerts(); track concert.id) {
+            @for (concert of concerts; track concert.id) {
                 @let disableButton = concert.status === 'sold-out' || concert.status === 'coming-soon' || concert.status === 'cancelled';
     
                 <div class="table-cell date">{{ concert.date | date:'mediumDate' }}</div>

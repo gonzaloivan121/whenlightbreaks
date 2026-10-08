@@ -1,6 +1,8 @@
-import { Component, computed, inject, input, resource, signal } from '@angular/core';
+import { Component, inject, input, signal } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { Router } from '@angular/router';
+import { toObservable, toSignal } from '@angular/core/rxjs-interop';
+import { switchMap } from 'rxjs';
 
 import { ContainerComponent } from '@components/container/container.component';
 import { TitleComponent } from '@components/title/title.component';
@@ -18,18 +20,17 @@ import { ProductID } from '@app/types/product.type';
 })
 export class ProductSection {
     title = signal<string>('Product');
-    
+
     private readonly router = inject(Router);
     private readonly productService: ProductService = inject(ProductService);
 
     productId = input.required<ProductID>();
 
-    productResource = resource({
-        loader: () => this.productService.GetProductById(this.productId()),
-    });
-
-    hasProduct = computed(() => this.productResource.hasValue());
-    product = computed(() => this.productResource.value());
+    productSignal = toSignal(
+        toObservable(this.productId).pipe(
+            switchMap((productId) => this.productService.GetProductById(productId)),
+        ),
+    );
 
     /**
      * Adds the current `Product` to the shopping cart.
@@ -37,7 +38,7 @@ export class ProductSection {
      * @memberof ProductSection
      */
     AddToCart() {
-        console.log(this.product());
+        console.log(this.productSignal());
     }
 
     /**

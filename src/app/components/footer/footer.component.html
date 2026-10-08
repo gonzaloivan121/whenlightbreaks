@@ -1,61 +1,71 @@
+@let navLinks = navLinksSignal() ?? [];
+@let socialLinks = socialLinksSignal() ?? [];
+@let streamingLinks = streamingLinksSignal() ?? [];
+
 <footer class="footer">
     <container-component size="large">
         <div class="footer-content">
-            <nav class="footer-nav">
-                <div class="footer-title">Navigation</div>
-                <ul>
-                    @for (navLink of navLinks(); track navLink.id) {
-                        <li>
-                            <a
-                                [routerLink]="navLink.url"
-                                routerLinkActive="active"
-                                [routerLinkActiveOptions]="{ exact: navLink.url === '/' }"
-                                class="social-media-link"
-                            >
-                                @if (navLink.icon) {
-                                    <ng-icon [name]="navLink.icon" class="social-media-icon"></ng-icon>
-                                }
-                                {{ navLink.label }}
-                            </a>
-                        </li>
-                    }
-                </ul>
-            </nav>
+            @if (navLinks.length > 0) {
+                <nav class="footer-nav">
+                    <div class="footer-title">Navigation</div>
+                    <ul>
+                        @for (navLink of navLinks; track navLink.id) {
+                            <li>
+                                <a
+                                    [routerLink]="navLink.url"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: navLink.url === '/' }"
+                                    class="social-media-link"
+                                >
+                                    @if (navLink.icon) {
+                                        <ng-icon [name]="navLink.icon" class="social-media-icon"></ng-icon>
+                                    }
+                                    {{ navLink.label }}
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
 
-            <nav class="footer-nav">
-                <div class="footer-title">Follow us</div>
-                <ul>
-                    @for (socialLink of socialLinks(); track socialLink.id) {
-                        <li>
-                            <a
-                                [href]="socialLink.url"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                [title]="socialLink.label"
-                                class="social-media-link"
-                            >
-                                <ng-icon [name]="socialLink.icon" class="social-media-icon"></ng-icon>
-                                {{ socialLink.label }}
-                            </a>
-                        </li>
-                    }
-                </ul>
-            </nav>
+            @if (socialLinks.length > 0) {
+                <nav class="footer-nav">
+                    <div class="footer-title">Follow us</div>
+                    <ul>
+                        @for (socialLink of socialLinks; track socialLink.id) {
+                            <li>
+                                <a
+                                    [href]="socialLink.url"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    [title]="socialLink.label"
+                                    class="social-media-link"
+                                >
+                                    <ng-icon [name]="socialLink.icon" class="social-media-icon"></ng-icon>
+                                    {{ socialLink.label }}
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
 
-            <nav class="footer-nav">
-                <div class="footer-title">Listen to us</div>
-                <ul>
-                    @for (streamingLink of streamingLinks(); track streamingLink.id) {
-                        <li>
-                            <a [href]="streamingLink.url" target="_blank" rel="noopener noreferrer" [title]="streamingLink.label"
-                                class="social-media-link">
-                                <ng-icon [name]="streamingLink.icon" class="social-media-icon"></ng-icon>
-                                {{ streamingLink.label }}
-                            </a>
-                        </li>
-                    }
-                </ul>
-            </nav>
+            @if (streamingLinks.length > 0) {
+                <nav class="footer-nav">
+                    <div class="footer-title">Listen to us</div>
+                    <ul>
+                        @for (streamingLink of streamingLinks; track streamingLink.id) {
+                            <li>
+                                <a [href]="streamingLink.url" target="_blank" rel="noopener noreferrer" [title]="streamingLink.label"
+                                    class="social-media-link">
+                                    <ng-icon [name]="streamingLink.icon" class="social-media-icon"></ng-icon>
+                                    {{ streamingLink.label }}
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
 
             <div class="footer-nav footer-logo">
                 <a class="footer-logo-image" [routerLink]="'/'">

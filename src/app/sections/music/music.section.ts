@@ -1,10 +1,11 @@
-import { Component, computed, inject, resource, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 import { ContainerComponent } from '@components/container/container.component';
 import { TitleComponent } from '@components/title/title.component';
 import { SongComponent } from '@components/song/song.component';
 
-import { SongService } from '@services/song/song.service';
+import { SongService } from '@app/services/song/song.service';
 
 @Component({
     selector: 'music-section',
@@ -14,13 +15,8 @@ import { SongService } from '@services/song/song.service';
 })
 export class MusicSection {
     title = signal<string>('Music');
-    
+
     private readonly songService: SongService = inject(SongService);
 
-    songsResource = resource({
-        loader: () => this.songService.GetSongs(),
-    });
-
-    hasSongs = computed(() => this.songsResource.hasValue());
-    songs = computed(() => this.songsResource.value() ?? []);
+    songsSignal = toSignal(this.songService.GetSongs());
 }

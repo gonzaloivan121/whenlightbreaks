@@ -6,10 +6,11 @@ import { HeroComponent } from '@components/hero/hero.component';
 import { HeroContentComponent } from '@components/hero/hero-content/hero-content.component';
 import { ButtonComponent } from '@components/button/button.component';
 
-import { UserService } from '@services/user/user.service';
-import { CardComponent } from '@app/components/card/card.component';
-import { CardHeaderComponent } from '@app/components/card/card-header/card-header.component';
-import { CardBodyComponent } from '@app/components/card/card-body/card-body.component';
+import { CardComponent } from '@components/card/card.component';
+import { CardHeaderComponent } from '@components/card/card-header/card-header.component';
+import { CardBodyComponent } from '@components/card/card-body/card-body.component';
+
+import { AuthService } from '@services/auth/auth.service';
 
 /**
  * Represents the model for `User` login credentials.
@@ -58,7 +59,7 @@ interface LoginModel {
 })
 export class LoginPage {
     private readonly router = inject(Router);
-    private readonly userService: UserService = inject(UserService);
+    private readonly authService: AuthService = inject(AuthService);
 
     loginModel = signal<LoginModel>({
         username: '',
@@ -75,15 +76,9 @@ export class LoginPage {
      *
      * @memberof LoginPage
      */
-    async OnSubmit(): Promise<void> {
+    OnSubmit(): void {
         const formData = this.loginModel();
-        const result = await this.Login(formData.username, formData.password);
-
-        if (result) {
-            console.log('Login successful');
-        } else {
-            console.log('Login failed');
-        }
+        this.Login(formData.username, formData.password);
     }
 
     /**
@@ -96,28 +91,20 @@ export class LoginPage {
     }
 
     /**
-     * Attempts to log in a user with the provided username and password.
+     * Attempts to log in a `User` with the provided username and password.
      *
      * @param {string} username - The username of the user attempting to log in.
      * @param {string} password - The password of the user attempting to log in.
-     * @returns {Promise<boolean>} A promise that resolves with a boolean indicating the success of the login attempt.
      * @memberof LoginPage
      */
-    async Login(username: string, password: string): Promise<boolean> {
-        let result: boolean = true;
-
-        const user = await this.userService.Login(username, password).catch((error) => {
-            result = false;
+    Login(username: string, password: string): void {
+        this.authService.Login({ username, password }).subscribe({
+            next: () => {
+                console.log('User is live!');
+            },
+            error: (err) => {
+                console.error(err);
+            }
         });
-
-        if (!user) {
-            result = false;
-        } else {
-            console.log(user);
-        }
-
-        console.log(`Login result: ${result}`);
-
-        return result;
     }
 }

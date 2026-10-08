@@ -1,5 +1,6 @@
-import { Component, computed, inject, input, resource } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 import { NgIcon } from '@ng-icons/core';
 
@@ -20,20 +21,7 @@ export class FooterComponent {
     private readonly socialLinkService: SocialLinkService = inject(SocialLinkService);
     private readonly streamingLinkService: StreamingLinkService = inject(StreamingLinkService);
 
-    navLinksResource = resource({
-        loader: () => this.navLinkService.GetLinks(),
-    });
-    socialLinksResource = resource({
-        loader: () => this.socialLinkService.GetLinks(),
-    });
-    streamingLinksResource = resource({
-        loader: () => this.streamingLinkService.GetLinks(),
-    });
-
-    hasNavLinks = computed(() => this.navLinksResource.hasValue());
-    navLinks = computed(() => this.navLinksResource.value());
-    hasSocialLinks = computed(() => this.socialLinksResource.hasValue());
-    socialLinks = computed(() => this.socialLinksResource.value());
-    hasStreamingLinks = computed(() => this.streamingLinksResource.hasValue());
-    streamingLinks = computed(() => this.streamingLinksResource.value());
+    navLinksSignal = toSignal(this.navLinkService.GetLinks());
+    socialLinksSignal = toSignal(this.socialLinkService.GetLinks());
+    streamingLinksSignal = toSignal(this.streamingLinkService.GetLinks());
 }

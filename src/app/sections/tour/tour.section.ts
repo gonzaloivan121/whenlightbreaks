@@ -1,5 +1,6 @@
-import { Component, inject, computed, resource, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { DatePipe, TitleCasePipe } from '@angular/common';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 import { SeparatePipe } from '@pipes/separate/separate.pipe';
 
@@ -27,12 +28,7 @@ export class TourSection {
 
     private readonly concertService: ConcertService = inject(ConcertService);
 
-    concertsResource = resource({
-        loader: () => this.concertService.GetConcerts(),
-    });
-
-    hasConcerts = computed(() => this.concertsResource.hasValue());
-    concerts = computed(() => this.concertsResource.value() ?? []);
+    concertsSignal = toSignal(this.concertService.GetConcerts());
 
     BuyTickets(ticketsUrl: string): void {
         window.open(ticketsUrl, '_blank', 'noopener,noreferrer');

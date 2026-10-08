@@ -1,7 +1,10 @@
+@let navLinks = navLinksSignal() ?? [];
+@let socialLinks = socialLinksSignal() ?? [];
+
 <div class="navbar">
     <nav class="navbar-start">
         <ul class="menu">
-            @for (navLink of navLinks(); track navLink.id) {
+            @for (navLink of navLinks; track navLink.id) {
                 <li>
                     <a
                         [routerLink]="navLink.url"
@@ -23,7 +26,7 @@
 
     <div class="navbar-end">
         <ul class="menu">
-            @for (socialLink of socialLinks(); track socialLink.id) {
+            @for (socialLink of socialLinks; track socialLink.id) {
                 <li>
                     <a [href]="socialLink.url" target="_blank" rel="noopener noreferrer" [title]="socialLink.label">
                         <ng-icon [name]="socialLink.icon"></ng-icon>

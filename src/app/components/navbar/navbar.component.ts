@@ -1,4 +1,5 @@
 import { Component, computed, inject, input, resource } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 
 import { NgIcon } from "@ng-icons/core";
@@ -16,15 +17,6 @@ export class NavbarComponent {
     private readonly navLinkService: NavLinkService = inject(NavLinkService);
     private readonly socialLinkService: SocialLinkService = inject(SocialLinkService);
 
-    navLinksResource = resource({
-        loader: () => this.navLinkService.GetLinks(),
-    });
-    socialLinksResource = resource({
-        loader: () => this.socialLinkService.GetLinks(),
-    });
-
-    hasNavLinks = computed(() => this.navLinksResource.hasValue());
-    navLinks = computed(() => this.navLinksResource.value());
-    hasSocialLinks = computed(() => this.socialLinksResource.hasValue());
-    socialLinks = computed(() => this.socialLinksResource.value());
+    navLinksSignal = toSignal(this.navLinkService.GetLinks());
+    socialLinksSignal = toSignal(this.socialLinkService.GetLinks());
 }

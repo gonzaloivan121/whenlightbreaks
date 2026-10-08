@@ -1,15 +1,17 @@
+@let product = productSignal();
+
 <container-component size="large">
     <title-component [title]="title()" color="primary" size="large" [centered]="true"></title-component>
 
-    @if (hasProduct()) {
+    @if (product) {
         <div class="product">
-            <img class="product-image" [src]="product()?.imageUrl" alt="{{ product()?.name }}">
+            <img class="product-image" [src]="product?.imageUrl" alt="{{ product?.name }}">
     
             <div class="product-details">
-                <h2 class="product-name">{{ product()?.name }}</h2>
-                <p class="product-price">{{ product()?.price | currency }}</p>
+                <h2 class="product-name">{{ product?.name }}</h2>
+                <p class="product-price">{{ product?.price | currency }}</p>
                 <button-component label="Add to Cart" variant="light" size="medium" icon="ionCart" [block]="true" class="product-buy" (onClick)="AddToCart()"></button-component>
-                <p class="product-description">{{ product()?.description }}</p>
+                <p class="product-description">{{ product?.description }}</p>
             </div>
         </div>
     } @else {

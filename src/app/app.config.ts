@@ -1,14 +1,20 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 
 import { provideNgIconLoader } from '@ng-icons/core';
 
 import { routes } from './app.routes';
 
+import { apiKeyInterceptor } from '@interceptors/api-key.interceptor';
+
 export const appConfig: ApplicationConfig = {
     providers: [
         provideBrowserGlobalErrorListeners(),
         provideRouter(routes),
+        provideHttpClient(
+            withInterceptors([apiKeyInterceptor])
+        ),
         provideNgIconLoader(async (name: string) => {
             let module: any;
 

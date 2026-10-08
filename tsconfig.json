@@ -23,6 +23,9 @@
       "@helpers/*": [
         "./src/app/helpers/*"
       ],
+      "@interceptors/*": [
+        "./src/app/interceptors/*"
+      ],
       "@models/*": [
         "./src/app/models/*"
       ],

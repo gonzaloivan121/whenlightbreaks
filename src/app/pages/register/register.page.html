@@ -1,1 +1,66 @@
-<p>register.page works!</p>
+<main class="register-page" aria-label="Register page">
+    <hero-component
+        backgroundType="video"
+        [overlay]="false"
+        [fullScreen]="true"
+        videoSrc="assets/videos/hero.mp4"
+        videoPoster="assets/images/hero.webp"
+    >
+        <hero-content-component
+            title="Register"
+            description="Please, create your account."
+        >
+            <card-component>
+                <card-header-component>
+                    <h2>Register</h2>
+                </card-header-component>
+
+                <card-body-component>
+                    <form (ngSubmit)="OnSubmit()" [formRoot]="registerForm">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" [formField]="registerForm.firstName" placeholder="Enter your first name" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" [formField]="registerForm.lastName" placeholder="Enter your last name" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" [formField]="registerForm.username" placeholder="Enter your username" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" [formField]="registerForm.password" placeholder="Enter your password" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" [formField]="registerForm.email" placeholder="Enter your email" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="phone" id="phone" [formField]="registerForm.phone" placeholder="Enter your phone number" />
+                        </div>
+
+                        <a href="/login" class="forgot-password-link">Do you want to log in instead?</a>
+
+                        <button-component
+                            label="Register"
+                            variant="dark"
+                            icon="ionLogIn"
+                            title="Register"
+                            type="submit"
+                            [block]="true"
+                            (onClick)="OnSubmit()"
+                        ></button-component>
+                    </form>
+                </card-body-component>
+            </card-component>
+        </hero-content-component>
+    </hero-component>
+</main>
