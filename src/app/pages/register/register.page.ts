@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
-import { form, FormField, FormRoot } from '@angular/forms/signals';
+import { email, form, FormField, FormRoot, minLength, pattern, required } from '@angular/forms/signals';
 
 import { HeroComponent } from '@components/hero/hero.component';
 import { HeroContentComponent } from '@components/hero/hero-content/hero-content.component';
@@ -44,7 +44,45 @@ export class RegisterPage {
         phone: '',
     });
 
-    registerForm = form(this.registerModel);
+    registerForm = form(this.registerModel, (schemaPath) => {
+        required(schemaPath.firstName, { message: 'First name is required' });
+        required(schemaPath.lastName, { message: 'Last name is required' });
+        required(schemaPath.username, { message: 'Username is required' });
+        required(schemaPath.password, { message: 'Password is required' });
+        minLength(schemaPath.password, 8, {
+            message: 'Password must be at least 8 characters long.',
+        });
+        required(schemaPath.email, { message: 'Email is required' });
+        email(schemaPath.email, { message: 'Enter a valid email address' });
+        required(schemaPath.phone, { message: 'Phone is required' });
+        pattern(schemaPath.phone, /^\+[1-9]\d{1,14}$/, {
+            message: 'Phone must be in format: +1112223333',
+        });
+    });
+
+    get firstName() {
+        return this.registerForm.firstName;
+    }
+
+    get lastName() {
+        return this.registerForm.lastName;
+    }
+
+    get username() {
+        return this.registerForm.username;
+    }
+
+    get password() {
+        return this.registerForm.password;
+    }
+
+    get email() {
+        return this.registerForm.email;
+    }
+
+    get phone() {
+        return this.registerForm.phone;
+    }
 
     /**
      * Handles the submission of the register form.

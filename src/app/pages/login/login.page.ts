@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
-import { form, FormField } from '@angular/forms/signals';
+import { form, FormField, required } from '@angular/forms/signals';
 
 import { HeroComponent } from '@components/hero/hero.component';
 import { HeroContentComponent } from '@components/hero/hero-content/hero-content.component';
@@ -67,11 +67,26 @@ export class LoginPage {
         remember: false,
     });
 
-    loginForm = form(this.loginModel);
+    loginForm = form(this.loginModel, (schemaPath) => {
+        required(schemaPath.username, { message: 'Username is required' });
+        required(schemaPath.password, { message: 'Password is required' });
+    });
+
+    get username() {
+        return this.loginForm.username;
+    }
+
+    get password() {
+        return this.loginForm.password;
+    }
+
+    get remember() {
+        return this.loginForm.remember;
+    }
 
     /**
      * Handles the submission of the login form.
-     * 
+     *
      * It retrieves the form data and attempts to log in the user using the provided credentials.
      *
      * @memberof LoginPage
@@ -104,7 +119,7 @@ export class LoginPage {
             },
             error: (err) => {
                 console.error(err);
-            }
+            },
         });
     }
 }

@@ -13,3 +13,26 @@
     flex-wrap: wrap;
     gap: 1rem;
 }
+
+.form-group {
+    padding: .5em;
+    text-align: left;
+}
+
+label, input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 1em;
+}
+
+.error {
+    color: red;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}

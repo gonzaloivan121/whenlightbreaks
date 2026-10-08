@@ -10,7 +10,7 @@
             title="Register"
             description="Please, create your account."
         >
-            <card-component>
+            <card-component [elevated]="true" [rounded]="true">
                 <card-header-component>
                     <h2>Register</h2>
                 </card-header-component>
@@ -19,35 +19,73 @@
                     <form (ngSubmit)="OnSubmit()" [formRoot]="registerForm">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" [formField]="registerForm.firstName" placeholder="Enter your first name" autocomplete="given-name" />
+                            <input type="text" id="firstName" [formField]="firstName" placeholder="Enter your first name" autocomplete="given-name" />
+
+                            @if (firstName().errors() && firstName().touched()) {
+                                @for (error of firstName().errors(); track $index) {
+                                    <p class="error">{{ error.message }}</p>
+                                }
+                            }
                         </div>
 
                         <div class="form-group">
                             <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" [formField]="registerForm.lastName" placeholder="Enter your last name" autocomplete="family-name" />
+                            <input type="text" id="lastName" [formField]="lastName" placeholder="Enter your last name" autocomplete="family-name" />
+
+                            @if (lastName().errors() && lastName().touched()) {
+                                @for (error of lastName().errors(); track $index) {
+                                    <p class="error">{{ error.message }}</p>
+                                }
+                            }
                         </div>
 
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" id="username" [formField]="registerForm.username" placeholder="Enter your username" autocomplete="username" />
+                            <input type="text" id="username" [formField]="username" placeholder="Enter your username" autocomplete="username" />
+
+                            @if (username().errors() && username().touched()) {
+                                @for (error of username().errors(); track $index) {
+                                    <p class="error">{{ error.message }}</p>
+                                }
+                            }
                         </div>
 
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" id="password" [formField]="registerForm.password" placeholder="Enter your password" autocomplete="new-password" />
+                            <input type="password" id="password" [formField]="password" placeholder="Enter your password" autocomplete="new-password" />
+
+                            @if (password().errors() && password().touched()) {
+                                @for (error of password().errors(); track $index) {
+                                    <p class="error">{{ error.message }}</p>
+                                }
+                            }
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" [formField]="registerForm.email" placeholder="Enter your email" autocomplete="email" />
+                            <input type="email" id="email" [formField]="email" placeholder="Enter your email" autocomplete="email" />
+
+                            @if (email().errors() && email().touched()) {
+                                @for (error of email().errors(); track $index) {
+                                    <p class="error">{{ error.message }}</p>
+                                }
+                            }
                         </div>
 
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input type="phone" id="phone" [formField]="registerForm.phone" placeholder="Enter your phone number" autocomplete="tel" />
+                            <input type="phone" id="phone" [formField]="phone" placeholder="Enter your phone number" autocomplete="tel" />
+
+                            @if (phone().errors() && phone().touched()) {
+                                @for (error of phone().errors(); track $index) {
+                                    <p class="error">{{ error.message }}</p>
+                                }
+                            }
                         </div>
 
-                        <a href="/login">Do you want to log in instead?</a>
+                        <div class="links">
+                            <a href="/login">Do you want to log in instead?</a>
+                        </div>
 
                         <button-component
                             label="Register"
@@ -56,6 +94,7 @@
                             title="Register"
                             type="submit"
                             [block]="true"
+                            [disabled]="registerForm().invalid()"
                             (onClick)="OnSubmit()"
                         ></button-component>
                     </form>
