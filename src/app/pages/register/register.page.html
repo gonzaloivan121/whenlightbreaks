@@ -19,35 +19,35 @@
                     <form (ngSubmit)="OnSubmit()" [formRoot]="registerForm">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" [formField]="registerForm.firstName" placeholder="Enter your first name" />
+                            <input type="text" id="firstName" [formField]="registerForm.firstName" placeholder="Enter your first name" autocomplete="given-name" />
                         </div>
 
                         <div class="form-group">
                             <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" [formField]="registerForm.lastName" placeholder="Enter your last name" />
+                            <input type="text" id="lastName" [formField]="registerForm.lastName" placeholder="Enter your last name" autocomplete="family-name" />
                         </div>
 
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" id="username" [formField]="registerForm.username" placeholder="Enter your username" />
+                            <input type="text" id="username" [formField]="registerForm.username" placeholder="Enter your username" autocomplete="username" />
                         </div>
 
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" id="password" [formField]="registerForm.password" placeholder="Enter your password" />
+                            <input type="password" id="password" [formField]="registerForm.password" placeholder="Enter your password" autocomplete="new-password" />
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" [formField]="registerForm.email" placeholder="Enter your email" />
+                            <input type="email" id="email" [formField]="registerForm.email" placeholder="Enter your email" autocomplete="email" />
                         </div>
 
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input type="phone" id="phone" [formField]="registerForm.phone" placeholder="Enter your phone number" />
+                            <input type="phone" id="phone" [formField]="registerForm.phone" placeholder="Enter your phone number" autocomplete="tel" />
                         </div>
 
-                        <a href="/login" class="forgot-password-link">Do you want to log in instead?</a>
+                        <a href="/login">Do you want to log in instead?</a>
 
                         <button-component
                             label="Register"
