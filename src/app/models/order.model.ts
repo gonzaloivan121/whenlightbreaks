@@ -4,7 +4,7 @@ import { UserID } from "@app/types/user.type";
 /**
  * Represents the status of an `Order`.
  */
-export type OrderStatus = 'pending' | 'completed' | 'canceled';
+export type OrderStatus = 'pending' | 'completed' | 'cancelled';
 
 /**
  * Represents an `Order`.
