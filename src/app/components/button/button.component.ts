@@ -1,14 +1,11 @@
 import { Component, computed, input, output } from '@angular/core';
 
-import { NgIcon } from '@ng-icons/core';
-
 export type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark' | 'link' | 'outline-primary' | 'outline-secondary' | 'outline-tertiary' | 'outline-danger' | 'outline-success' | 'outline-warning' | 'outline-info' | 'outline-light' | 'outline-dark';
 export type ButtonSize = 'small' | 'medium' | 'large';
 export type ButtonIconPosition = 'start' | 'end';
 
 @Component({
     selector: 'button-component',
-    imports: [NgIcon],
     templateUrl: './button.component.html',
     styleUrl: './button.component.css',
 })
