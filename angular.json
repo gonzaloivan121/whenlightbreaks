@@ -41,11 +41,7 @@
                         "production": {
                             "optimization": true,
                             "extractLicenses": true,
-                            "sourceMap": {
-                                "scripts": true,
-                                "styles": true,
-                                "sourcesContent": false
-                            },
+                            "sourceMap": false,
                             "budgets": [
                                 {
                                     "type": "initial",
@@ -69,11 +65,7 @@
                         "staging": {
                             "optimization": true,
                             "extractLicenses": true,
-                            "sourceMap": {
-                                "scripts": true,
-                                "styles": true,
-                                "sourcesContent": true
-                            },
+                            "sourceMap": false,
                             "budgets": [
                                 {
                                     "type": "initial",
