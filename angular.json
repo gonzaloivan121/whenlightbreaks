@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "when-light-breaks": {
+    "whenlightbreaks": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -54,10 +54,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "when-light-breaks:build:production"
+              "buildTarget": "whenlightbreaks:build:production"
             },
             "development": {
-              "buildTarget": "when-light-breaks:build:development"
+              "buildTarget": "whenlightbreaks:build:development"
             }
           },
           "defaultConfiguration": "development"
