@@ -1,4 +1,5 @@
 import {
+    // App logos
     ionBasket,
     ionArrowUp,
     ionHome,
@@ -10,6 +11,9 @@ import {
     ionInformationCircle,
     ionDocumentText,
     ionEnterOutline,
+    ionCalendarNumber,
+
+    // Social media logos
     ionLogoInstagram,
     ionLogoFacebook,
     ionLogoTiktok,
@@ -39,6 +43,7 @@ export const ionIcons = {
     ionInformationCircle,
     ionDocumentText,
     ionEnterOutline,
+    ionCalendarNumber,
 
     // Social media logos
     ionLogoInstagram,
