@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeroComponent, type HeroBackgroundType, type HeroSize } from './hero.component';
+import { HeroContentComponent } from './hero-content/hero-content.component';
 
 @Component({
-    imports: [HeroComponent],
+    imports: [HeroComponent, HeroContentComponent],
     template: `
         <hero-component
             [backgroundType]="backgroundType"
@@ -13,9 +14,12 @@ import { HeroComponent, type HeroBackgroundType, type HeroSize } from './hero.co
             [imageSrc]="imageSrc"
             [imageAlt]="imageAlt"
             [videoSrc]="videoSrc"
-            [videoPoster]="videoPoster">
-            <h1>Hero Headline</h1>
-            <p>Hero supporting text.</p>
+            [videoPoster]="videoPoster"
+        >
+            <hero-content-component
+                title="Hero Headline"
+                description="Hero supporting text."
+            ></hero-content-component>
         </hero-component>
     `,
 })
@@ -53,9 +57,12 @@ describe('HeroComponent', () => {
         fixture.detectChanges();
 
         const element = fixture.nativeElement as HTMLElement;
-
-        expect(element.querySelector('.hero-content h1')?.textContent).toContain('Hero Headline');
-        expect(element.querySelector('.hero-content p')?.textContent).toContain('Hero supporting text.');
+        expect(element.querySelector('.hero-content .hero-title')?.textContent).toContain(
+            'Hero Headline',
+        );
+        expect(
+            element.querySelector('.hero-content .hero-description')?.textContent,
+        ).toContain('Hero supporting text.');
     });
 
     it('should render an image background when image mode is used', () => {
@@ -96,7 +103,7 @@ describe('HeroComponent', () => {
         const element = heroFixture.nativeElement as HTMLElement;
 
         expect(component.fullScreen()).toBe(true);
-        expect(component.heroClass()).toContain('is-fullscreen');
-        expect(element.querySelector('.hero.is-fullscreen')).not.toBeNull();
+        expect(component.heroClass()).toContain('fullscreen');
+        expect(element.querySelector('.hero.fullscreen')).not.toBeNull();
     });
 });

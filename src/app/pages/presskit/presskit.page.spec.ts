@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PresskitPage } from './presskit.page';
+import { PressKitPage } from './presskit.page';
 
-describe('PresskitPage', () => {
-    let component: PresskitPage;
-    let fixture: ComponentFixture<PresskitPage>;
+describe('PressKitPage', () => {
+    let component: PressKitPage;
+    let fixture: ComponentFixture<PressKitPage>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [PresskitPage],
+            imports: [PressKitPage],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(PresskitPage);
+        fixture = TestBed.createComponent(PressKitPage);
         component = fixture.componentInstance;
         await fixture.whenStable();
     });
