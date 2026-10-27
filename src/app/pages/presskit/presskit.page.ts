@@ -13,7 +13,11 @@ import { ButtonComponent } from '@components/button/button.component';
     styleUrl: './presskit.page.css',
 })
 export class PressKitPage {
+    private readonly assetsFolder: string = 'assets';
+    private readonly documentsFolder: string = `${this.assetsFolder}/documents`;
+    private readonly pressKitFilename: string = 'When Light Breaks - Electronic Press Kit.pdf';
+
     DownloadPressKit(): void {
-        window.open('assets/documents/When Light Breaks - Press Kit - v2.pdf', '_blank');
+        window.open(`${this.documentsFolder}/${this.pressKitFilename}`, '_blank');
     }
 }
