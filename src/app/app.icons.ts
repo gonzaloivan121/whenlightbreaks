@@ -7,7 +7,6 @@ import {
     ionDownload,
     ionCart,
     ionTicket,
-    ionMusicalNotes,
     ionInformationCircle,
     ionDocumentText,
     ionEnterOutline,
@@ -17,8 +16,8 @@ import {
     ionLogoInstagram,
     ionLogoFacebook,
     ionLogoTiktok,
-    ionLogoTwitter,
     ionLogoYoutube,
+    ionLogoX,
     ionLogoAmazon,
 } from '@ng-icons/ionicons';
 
@@ -39,7 +38,6 @@ export const ionIcons = {
     ionDownload,
     ionCart,
     ionTicket,
-    ionMusicalNotes,
     ionInformationCircle,
     ionDocumentText,
     ionEnterOutline,
@@ -49,8 +47,8 @@ export const ionIcons = {
     ionLogoInstagram,
     ionLogoFacebook,
     ionLogoTiktok,
-    ionLogoTwitter,
     ionLogoYoutube,
+    ionLogoX,
     ionLogoAmazon,
 };
 

@@ -22,7 +22,7 @@ export class StreamingLinkService {
      * @memberof StreamingLinkService
      */
     private readonly links: Link[] = [
-        {
+        /*{
             id: ParseLinkID('4f0303c3-8896-457c-bd6f-3fc3de465d4b'),
             label: 'Apple Music',
             icon: 'simpleApplemusic',
@@ -63,7 +63,7 @@ export class StreamingLinkService {
             icon: 'simpleTidal',
             url: 'https://www.tidal.com/@WLB.band',
             createdAt: new Date(),
-        },
+        },*/
     ];
 
     /**

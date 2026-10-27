@@ -30,13 +30,6 @@ export class SocialLinkService {
             createdAt: new Date(),
         },
         {
-            id: ParseLinkID('b54c6fc6-5321-4ca2-a3f6-e765521be1e9'),
-            label: 'Facebook',
-            icon: 'ionLogoFacebook',
-            url: 'https://www.facebook.com/WhenLightBreaks',
-            createdAt: new Date(),
-        },
-        {
             id: ParseLinkID('70551ddc-46a6-466f-bf84-32962337bf64'),
             label: 'TikTok',
             icon: 'ionLogoTiktok',
@@ -44,10 +37,10 @@ export class SocialLinkService {
             createdAt: new Date(),
         },
         {
-            id: ParseLinkID('edc408d6-4d63-43bc-8e55-a90af6fa2ddb'),
-            label: 'Twitter',
-            icon: 'ionLogoTwitter',
-            url: 'https://twitter.com/WhenLightBreaksBand',
+            id: ParseLinkID('b54c6fc6-5321-4ca2-a3f6-e765521be1e9'),
+            label: 'Facebook',
+            icon: 'ionLogoFacebook',
+            url: 'https://www.facebook.com/WhenLightBreaks',
             createdAt: new Date(),
         },
         {
@@ -55,6 +48,13 @@ export class SocialLinkService {
             label: 'YouTube',
             icon: 'ionLogoYoutube',
             url: 'https://www.youtube.com/@WhenLightBreaksBand',
+            createdAt: new Date(),
+        },
+        {
+            id: ParseLinkID('166159b9-f91d-4627-9cd4-3ed6513c42f1'),
+            label: 'X',
+            icon: 'ionLogoX',
+            url: 'https://www.x.com/WhenLightBreaksBand',
             createdAt: new Date(),
         },
     ];
