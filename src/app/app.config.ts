@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 
 import { provideIcons } from '@ng-icons/core';
 
@@ -9,10 +9,16 @@ import { ionIcons, simpleIcons } from './app.icons';
 export const appConfig: ApplicationConfig = {
     providers: [
         provideBrowserGlobalErrorListeners(),
-        provideRouter(routes),
+        provideRouter(
+            routes,
+            withInMemoryScrolling({
+                anchorScrolling: 'enabled',
+                scrollPositionRestoration: "top",
+            }),
+        ),
         provideIcons({
             ...ionIcons,
-            ...simpleIcons
+            ...simpleIcons,
         }),
     ],
 };
