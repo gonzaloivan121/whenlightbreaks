@@ -1,70 +1,45 @@
 {
-    "version": "1.0",
-    "site": {
-        "name": "When Light Breaks",
-        "url": "https://www.whenlightbreaks.com/",
-        "description": "Official website of When Light Breaks, an independent four-piece alternative metal band formed in New York in 2026.",
-        "language": "en",
-        "type": "music-artist",
-        "sitemap": "https://www.whenlightbreaks.com/sitemap.xml"
+    "specVersion": "1.0",
+    "host": {
+        "displayName": "When Light Breaks",
+        "documentationUrl": "https://www.whenlightbreaks.com/"
     },
-    "artist": {
-        "name": "When Light Breaks",
-        "type": "MusicGroup",
-        "founded": "2026",
-        "location": "New York, NY",
-        "genres": ["Alternative Metal", "Metalcore", "Djent", "Deathcore"],
-        "description": "When Light Breaks blends metalcore, djent, and deathcore with cinematic atmospheres and electronic textures. The band explores identity, human emotion, personal experience, social contradictions, and the fragile boundary between perception and reality.",
-        "members": [
-            {
-                "name": "Blegh Lady",
-                "role": "Vocals"
-            },
-            {
-                "name": "DVRK PRISM",
-                "role": "Guitar"
-            },
-            {
-                "name": "Dreadful Gooz",
-                "role": "Bass"
-            },
-            {
-                "name": "Morgan Simons",
-                "role": "Drums"
-            }
-        ],
-        "socialProfiles": [
-            "https://www.instagram.com/WhenLightBreaks",
-            "https://www.tiktok.com/@WhenLightBreaks",
-            "https://www.facebook.com/WhenLightBreaks",
-            "https://www.youtube.com/@WhenLightBreaksBand",
-            "https://www.x.com/WhenLightBreaksBand"
-        ]
-    },
-    "pages": [
+    "entries": [
         {
+            "identifier": "urn:air:whenlightbreaks.com:site:homepage",
+            "displayName": "When Light Breaks Home",
+            "type": "text/html",
             "url": "https://www.whenlightbreaks.com/",
-            "title": "Home",
-            "description": "Official site and introduction to When Light Breaks."
+            "description": "Official homepage for When Light Breaks, featuring the band's music, story, and latest updates.",
+            "representativeQueries": [
+                "who is When Light Breaks",
+                "listen to When Light Breaks",
+                "latest When Light Breaks music"
+            ]
         },
         {
+            "identifier": "urn:air:whenlightbreaks.com:site:about",
+            "displayName": "About When Light Breaks",
+            "type": "text/html",
             "url": "https://www.whenlightbreaks.com/about",
-            "title": "About",
-            "description": "The band's story, members, musical style, and release information."
+            "description": "The band history, members, musical style, and release information for When Light Breaks.",
+            "representativeQueries": [
+                "what is the story behind When Light Breaks",
+                "who are the band members",
+                "what genre is When Light Breaks"
+            ]
         },
         {
+            "identifier": "urn:air:whenlightbreaks.com:site:press-kit",
+            "displayName": "Press Kit",
+            "type": "text/html",
             "url": "https://www.whenlightbreaks.com/press-kit",
-            "title": "Press Kit",
-            "description": "Official electronic press kit with biography, photos, branding, and booking information."
+            "description": "Official band press kit with biography, imagery, branding, and booking information.",
+            "representativeQueries": [
+                "When Light Breaks press kit",
+                "band bio for When Light Breaks",
+                "booking information for When Light Breaks"
+            ]
         }
-    ],
-    "releases": [
-        {
-            "title": "Pre-Human State",
-            "type": "single",
-            "releaseDate": "2026-11-06",
-            "description": "The band's debut single, accompanied by an official music video directed by Tom Flynn."
-        }
-    ],
-    "futurePlans": ["Further singles and a full-length album are planned for 2027."]
+    ]
 }
