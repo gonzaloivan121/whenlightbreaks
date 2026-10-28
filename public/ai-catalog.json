@@ -1,0 +1,70 @@
+{
+    "version": "1.0",
+    "site": {
+        "name": "When Light Breaks",
+        "url": "https://www.whenlightbreaks.com/",
+        "description": "Official website of When Light Breaks, an independent four-piece alternative metal band formed in New York in 2026.",
+        "language": "en",
+        "type": "music-artist",
+        "sitemap": "https://www.whenlightbreaks.com/sitemap.xml"
+    },
+    "artist": {
+        "name": "When Light Breaks",
+        "type": "MusicGroup",
+        "founded": "2026",
+        "location": "New York, NY",
+        "genres": ["Alternative Metal", "Metalcore", "Djent", "Deathcore"],
+        "description": "When Light Breaks blends metalcore, djent, and deathcore with cinematic atmospheres and electronic textures. The band explores identity, human emotion, personal experience, social contradictions, and the fragile boundary between perception and reality.",
+        "members": [
+            {
+                "name": "Blegh Lady",
+                "role": "Vocals"
+            },
+            {
+                "name": "DVRK PRISM",
+                "role": "Guitar"
+            },
+            {
+                "name": "Dreadful Gooz",
+                "role": "Bass"
+            },
+            {
+                "name": "Morgan Simons",
+                "role": "Drums"
+            }
+        ],
+        "socialProfiles": [
+            "https://www.instagram.com/WhenLightBreaks",
+            "https://www.tiktok.com/@WhenLightBreaks",
+            "https://www.facebook.com/WhenLightBreaks",
+            "https://www.youtube.com/@WhenLightBreaksBand",
+            "https://www.x.com/WhenLightBreaksBand"
+        ]
+    },
+    "pages": [
+        {
+            "url": "https://www.whenlightbreaks.com/",
+            "title": "Home",
+            "description": "Official site and introduction to When Light Breaks."
+        },
+        {
+            "url": "https://www.whenlightbreaks.com/about",
+            "title": "About",
+            "description": "The band's story, members, musical style, and release information."
+        },
+        {
+            "url": "https://www.whenlightbreaks.com/press-kit",
+            "title": "Press Kit",
+            "description": "Official electronic press kit with biography, photos, branding, and booking information."
+        }
+    ],
+    "releases": [
+        {
+            "title": "Pre-Human State",
+            "type": "single",
+            "releaseDate": "2026-11-06",
+            "description": "The band's debut single, accompanied by an official music video directed by Tom Flynn."
+        }
+    ],
+    "futurePlans": ["Further singles and a full-length album are planned for 2027."]
+}

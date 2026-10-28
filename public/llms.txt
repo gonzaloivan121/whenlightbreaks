@@ -1,0 +1,36 @@
+# When Light Breaks
+
+> Official website of When Light Breaks, an independent four-piece alternative metal band formed in New York in 2026.
+
+When Light Breaks blends alternative metal, metalcore, djent, and deathcore with cinematic atmospheres and electronic textures. The band explores identity, human emotion, personal experience, social contradictions, and the fragile boundary between perception and reality.
+
+## Official pages
+
+- [Home](https://www.whenlightbreaks.com/): Official site and band introduction.
+- [About](https://www.whenlightbreaks.com/about): Band story, members, musical style, and release information.
+- [Press Kit](https://www.whenlightbreaks.com/press-kit): Official electronic press kit, including biography, photos, branding, and booking information.
+
+## Band
+
+- Blegh Lady — vocals
+- DVRK PRISM — guitar
+- Dreadful Gooz — bass
+- Morgan Simons — drums
+
+## Music
+
+- “Pre-Human State” is the band's debut single, scheduled for release on November 6, 2026. Its official music video is directed by Tom Flynn.
+- Further singles and a full-length album are planned for 2027.
+
+## Discovery
+
+- [XML sitemap](https://www.whenlightbreaks.com/sitemap.xml)
+- [AI catalog](https://www.whenlightbreaks.com/ai-catalog.json)
+
+## Official social profiles
+
+- [Instagram](https://www.instagram.com/WhenLightBreaks)
+- [TikTok](https://www.tiktok.com/@WhenLightBreaks)
+- [Facebook](https://www.facebook.com/WhenLightBreaks)
+- [YouTube](https://www.youtube.com/@WhenLightBreaksBand)
+- [X](https://www.x.com/WhenLightBreaksBand)
