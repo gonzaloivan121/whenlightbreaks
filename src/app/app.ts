@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { inject } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
 import { LayoutComponent } from "@components/layout/layout.component";
 
 @Component({
@@ -8,4 +11,9 @@ import { LayoutComponent } from "@components/layout/layout.component";
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {}
+export class App {
+    constructor() {
+        inject();
+        injectSpeedInsights();
+    }
+}
