@@ -9,11 +9,50 @@ import { NotfoundPage } from '@pages/notfound/notfound.page';
 
 export const routes: Routes = [
     // Home page
-    { path: '', component: HomePage, title: 'Home - When Light Breaks' },
-    { path: 'about', component: AboutPage, title: 'About - When Light Breaks' },
-    { path: 'music', component: MusicPage, title: 'Music - When Light Breaks' },
-    { path: 'press-kit', component: PressKitPage, title: 'Press Kit - When Light Breaks' },
+    {
+        path: '',
+        title: 'Home',
+        data: {
+            description:
+                'Formed in New York in 2026, When Light Breaks is an independent alternative metal band featuring Blegh Lady (vocals), DVRK PRISM (guitar), Dreadful Gooz (bass), and Morgan Simons (drums)',
+        },
+        component: HomePage,
+    },
+    {
+        path: 'about',
+        title: 'About',
+        data: {
+            description:
+                'Learn the story behind When Light Breaks, an independent alternative metal band from New York, and meet its members: Blegh Lady, DVRK PRISM, Dreadful Gooz, and Morgan Simons.',
+        },
+        component: AboutPage,
+    },
+    {
+        path: 'music',
+        title: 'Music',
+        data: {
+            description:
+                'Stream the official discography, music videos, and releases by When Light Breaks, featuring their debut single "Pre-Human State".',
+        },
+        component: MusicPage,
+    },
+    {
+        path: 'press-kit',
+        title: 'Press Kit',
+        data: {
+            description:
+                'Official Electronic Press Kit (EPK) for When Light Breaks. Access high-res band photos, official biography, music releases, technical riders, and booking contact information.',
+        },
+        component: PressKitPage,
+    },
 
     // Not Found Page
-    { path: '**', component: NotfoundPage, title: 'Not Found - When Light Breaks' },
+    {
+        path: '**',
+        title: 'Not Found',
+        data: {
+            description: 'The page you are looking for does not exist. Please check the URL.',
+        },
+        component: NotfoundPage,
+    },
 ];

@@ -1,0 +1,45 @@
+{
+    "specVersion": "1.0",
+    "host": {
+        "displayName": "When Light Breaks",
+        "documentationUrl": "https://www.whenlightbreaks.com/"
+    },
+    "entries": [
+        {
+            "identifier": "urn:air:whenlightbreaks.com:site:homepage",
+            "displayName": "When Light Breaks Home",
+            "type": "text/html",
+            "url": "https://www.whenlightbreaks.com/",
+            "description": "Official homepage for When Light Breaks, featuring the band's music, story, and latest updates.",
+            "representativeQueries": [
+                "who is When Light Breaks",
+                "listen to When Light Breaks",
+                "latest When Light Breaks music"
+            ]
+        },
+        {
+            "identifier": "urn:air:whenlightbreaks.com:site:about",
+            "displayName": "About When Light Breaks",
+            "type": "text/html",
+            "url": "https://www.whenlightbreaks.com/about",
+            "description": "The band history, members, musical style, and release information for When Light Breaks.",
+            "representativeQueries": [
+                "what is the story behind When Light Breaks",
+                "who are the band members",
+                "what genre is When Light Breaks"
+            ]
+        },
+        {
+            "identifier": "urn:air:whenlightbreaks.com:site:press-kit",
+            "displayName": "Press Kit",
+            "type": "text/html",
+            "url": "https://www.whenlightbreaks.com/press-kit",
+            "description": "Official band press kit with biography, imagery, branding, and booking information.",
+            "representativeQueries": [
+                "When Light Breaks press kit",
+                "band bio for When Light Breaks",
+                "booking information for When Light Breaks"
+            ]
+        }
+    ]
+}
