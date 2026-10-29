@@ -7,6 +7,7 @@ When Light Breaks blends alternative metal, metalcore, djent, and deathcore with
 ## Official pages
 
 - [Home](https://www.whenlightbreaks.com/): Official site and band introduction.
+- [Music](https://www.whenlightbreaks.com/music): The official discography, music videos, and releases by When Light Breaks.
 - [About](https://www.whenlightbreaks.com/about): Band story, members, musical style, and release information.
 - [Press Kit](https://www.whenlightbreaks.com/press-kit): Official electronic press kit, including biography, photos, branding, and booking information.
 
@@ -19,13 +20,13 @@ When Light Breaks blends alternative metal, metalcore, djent, and deathcore with
 
 ## Music
 
-- “Pre-Human State” is the band's debut single, scheduled for release on November 6, 2026. Its official music video is directed by Tom Flynn.
+- “Pre-Human State” is the band's debut single, released on November 6, 2026. Its official music video is directed by Tom Flynn.
 - Further singles and a full-length album are planned for 2027.
 
 ## Discovery
 
 - [XML sitemap](https://www.whenlightbreaks.com/sitemap.xml)
-- [AI catalog](https://www.whenlightbreaks.com/ai-catalog.json)
+- [AI catalog](https://www.whenlightbreaks.com/.well-known/ai-catalog.json)
 
 ## Official social profiles
 
