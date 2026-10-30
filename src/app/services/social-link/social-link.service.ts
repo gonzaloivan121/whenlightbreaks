@@ -26,21 +26,21 @@ export class SocialLinkService {
             id: ParseLinkID('02dc48d2-1db6-4666-b410-f743f244db03'),
             label: 'Instagram',
             icon: 'ionLogoInstagram',
-            url: 'https://www.instagram.com/WhenLightBreaks',
+            url: 'https://www.instagram.com/whenlightbreaks',
             createdAt: new Date(),
         },
         {
             id: ParseLinkID('70551ddc-46a6-466f-bf84-32962337bf64'),
             label: 'TikTok',
             icon: 'ionLogoTiktok',
-            url: 'https://www.tiktok.com/@WhenLightBreaks',
+            url: 'https://www.tiktok.com/@whenlightbreaks',
             createdAt: new Date(),
         },
         {
             id: ParseLinkID('b54c6fc6-5321-4ca2-a3f6-e765521be1e9'),
             label: 'Facebook',
             icon: 'ionLogoFacebook',
-            url: 'https://www.facebook.com/WhenLightBreaks',
+            url: 'https://www.facebook.com/whenlightbreaks',
             createdAt: new Date(),
         },
         {
@@ -54,7 +54,7 @@ export class SocialLinkService {
             id: ParseLinkID('166159b9-f91d-4627-9cd4-3ed6513c42f1'),
             label: 'X',
             icon: 'ionLogoX',
-            url: 'https://www.x.com/WhenLightBreaksBand',
+            url: 'https://x.com/WLBreaks',
             createdAt: new Date(),
         },
     ];
