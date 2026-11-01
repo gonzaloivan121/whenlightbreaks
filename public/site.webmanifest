@@ -107,12 +107,6 @@
     "display": "standalone",
     "shortcuts": [
         {
-            "name": "Music",
-            "short_name": "Music",
-            "description": "The music page for When Light Breaks. Here you can find all of the music that When Light Breaks has released.",
-            "url": "/music"
-        },
-        {
             "name": "About",
             "short_name": "About",
             "description": "The about page for When Light Breaks. Here you can find out more about the band and their journey.",
