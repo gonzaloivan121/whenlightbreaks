@@ -30,6 +30,13 @@ export class NavLinkService {
             createdAt: new Date(),
         },
         {
+            id: ParseLinkID('08a1e80b-d895-4be9-a721-634324f26fee'),
+            label: 'Music',
+            icon: 'ionMusicalNotes',
+            url: '/music',
+            createdAt: new Date(),
+        },
+        {
             id: ParseLinkID('09f65b01-690d-40b2-91da-f5197d1066b6'),
             label: 'About',
             icon: 'ionInformationCircle',
