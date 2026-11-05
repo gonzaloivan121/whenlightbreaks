@@ -80,6 +80,7 @@
 
     @media (max-width: 768px) {
         --navbar-logo-max-height: 2em;
+        --navbar-padding: 2rem;
 
         .menu {
             gap: 1rem;
