@@ -5,6 +5,8 @@
     border-radius: 12px;
     overflow: hidden;
 
+    transition: transform 0.15s ease-in-out;
+
     .product-image {
         max-width: 100%;
         aspect-ratio: 1 / 1;
@@ -27,6 +29,7 @@
 
         .product-description {
             font-size: 0.95em;
+            line-height: 1.5em;
         }
 
         .product-info {
@@ -41,5 +44,9 @@
                 font-weight: 800;
             }
         }
+    }
+
+    &:hover {
+        transform: scale(1.01);
     }
 }
