@@ -18,6 +18,18 @@
             ]
         },
         {
+            "identifier": "urn:air:whenlightbreaks.com:site:music",
+            "displayName": "When Light Breaks' Music",
+            "type": "text/html",
+            "url": "https://www.whenlightbreaks.com/music",
+            "description": "The official discography, music videos, and releases by When Light Breaks, featuring their debut single \"Pre-Human State\".",
+            "representativeQueries": [
+                "listen to When Light Breaks",
+                "When Light Breaks music",
+                "When Light Breaks Pre-Human State"
+            ]
+        },
+        {
             "identifier": "urn:air:whenlightbreaks.com:site:about",
             "displayName": "About When Light Breaks",
             "type": "text/html",
