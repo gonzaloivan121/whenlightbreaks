@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 
 import { HomePage } from '@pages/home/home.page';
 import { AboutPage } from '@pages/about/about.page';
+import { MusicPage } from '@pages/music/music.page';
 import { PressKitPage } from '@pages/presskit/presskit.page';
 
 import { NotfoundPage } from '@pages/notfound/notfound.page';
@@ -25,6 +26,15 @@ export const routes: Routes = [
                 'Learn the story behind When Light Breaks, an independent alternative metal band from New York, and meet its members: Blegh Lady, DVRK PRISM, Dreadful Gooz, and Morgan Simons.',
         },
         component: AboutPage,
+    },
+    {
+        path: 'music',
+        title: 'Music',
+        data: {
+            description:
+                'Stream the official discography, music videos, and releases by When Light Breaks, featuring their debut single "Pre-Human State".',
+        },
+        component: MusicPage,
     },
     {
         path: 'press-kit',
