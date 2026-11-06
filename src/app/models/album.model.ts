@@ -1,5 +1,7 @@
-import { AlbumID } from "@app/types/album.type";
+import { AlbumCode, AlbumID } from "@app/types/album.type";
 import { ArtistID } from "@app/types/artist.type";
+
+import { Link } from "@models/link.model";
 
 /**
  * Represents an `Album`.
@@ -25,6 +27,14 @@ export interface Album {
     title: string;
 
     /**
+     * The unique code for the `Album`.
+     *
+     * @type {AlbumCode}
+     * @memberof Album
+     */
+    code: AlbumCode;
+
+    /**
      * The URL of the cover image for the `Album`.
      *
      * @type {string}
@@ -38,7 +48,7 @@ export interface Album {
      * @type {string}
      * @memberof Album
      */
-    albumUrl: string;
+    albumUrls: Link[];
 
     /**
      * The unique identifier of the `Artist` associated with the `Album`.

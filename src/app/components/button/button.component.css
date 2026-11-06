@@ -14,8 +14,14 @@
     --btn-disabled-opacity: 0.6;
     --btn-disabled-filter: saturate(50%);
 
+    --btn-align-left: left;
+    --btn-align-center: center;
+    --btn-align-right: right;
+
+    --btn-align: var(--btn-align-center);
+
     display: flex;
-    justify-content: center;
+    justify-content: var(--btn-align);
     align-items: center;
     outline: 0;
     border: var(--btn-border-width) solid var(--btn-border);
@@ -249,6 +255,18 @@
 
     &.block {
         width: 100%;
+    }
+
+    &.align-left {
+        --btn-align: var(--btn-align-left);
+    }
+
+    &.align-center {
+        --btn-align: var(--btn-align-center);
+    }
+
+    &.align-right {
+        --btn-align: var(--btn-align-right);
     }
 
     & .icon-start {

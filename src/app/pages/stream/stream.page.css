@@ -1,0 +1,28 @@
+:host {
+    display: block;
+}
+
+.stream-page {
+    min-height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button-component {
+    display: contents;
+}
+
+.stream-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+    gap: 1rem;
+
+    max-width: 400px;
+    width: 100%;
+}

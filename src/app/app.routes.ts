@@ -5,6 +5,8 @@ import { AboutPage } from '@pages/about/about.page';
 import { MusicPage } from '@pages/music/music.page';
 import { PressKitPage } from '@pages/presskit/presskit.page';
 
+import { StreamPage } from '@pages/stream/stream.page';
+
 import { NotfoundPage } from '@pages/notfound/notfound.page';
 
 export const routes: Routes = [
@@ -44,6 +46,17 @@ export const routes: Routes = [
                 'Official Electronic Press Kit (EPK) for When Light Breaks. Access high-res band photos, official biography, music releases, technical riders, and booking contact information.',
         },
         component: PressKitPage,
+    },
+
+    // Pre-Human State Single Page
+    {
+        path: 'pre-human-state',
+        title: 'Pre-Human State',
+        data: {
+            description:
+                'Stream the official single "Pre-Human State" by When Light Breaks.',
+        },
+        component: StreamPage,
     },
 
     // Not Found Page

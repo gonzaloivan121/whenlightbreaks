@@ -2,10 +2,11 @@ import { Service } from '@angular/core';
 
 import { Album, CreateAlbum, DeleteAlbum, UpdateAlbum } from '@models/album.model';
 
-import { AlbumID, ParseAlbumID } from '@app/types/album.type';
+import { AlbumCode, AlbumID, ParseAlbumCode, ParseAlbumID } from '@app/types/album.type';
 import { ArtistID, ParseArtistID } from '@app/types/artist.type';
 
-import { NotFoundError } from '@app/errors';
+import { AlreadyExistsError, NotFoundError } from '@app/errors';
+import { ParseLinkID } from '@app/types/link.type';
 
 /**
  * Service for managing `Album` data.
@@ -26,8 +27,52 @@ export class AlbumService {
         {
             id: ParseAlbumID('a8c171e2-aa8d-4b27-ab1f-29d8a6e86aa2'),
             title: 'Pre-Human State',
+            code: ParseAlbumCode('pre-human-state'),
             coverUrl: 'assets/images/albums/pre-human-state.webp',
-            albumUrl: 'https://example.com/albums/pre-human-state',
+            albumUrls: [
+                {
+                    id: ParseLinkID('aaff7713-5213-4ba1-8b02-25c4393dcbec'),
+                    label: 'YouTube Video',
+                    icon: 'ionLogoYoutube',
+                    url: 'https://www.youtube.com/watch?v=yduB0xUIfGg',
+                    createdAt: new Date(),
+                },
+                {
+                    id: ParseLinkID('cf7856e0-02be-46a3-9a1f-f10107f1201a'),
+                    label: 'Spotify',
+                    icon: 'simpleSpotify',
+                    url: 'https://open.spotify.com/track/3RikTRSVoKaJkQUw5Cyutu',
+                    createdAt: new Date(),
+                },
+                {
+                    id: ParseLinkID('62e69b04-2fb4-43ac-b344-33de3f966e2f'),
+                    label: 'Apple Music',
+                    icon: 'simpleApplemusic',
+                    url: 'https://music.apple.com/song/pre-human-state/6819714262',
+                    createdAt: new Date(),
+                },
+                {
+                    id: ParseLinkID('114d73d0-2ad9-4144-b8a0-4a5dc159d51c'),
+                    label: 'YouTube Music',
+                    icon: 'simpleYoutubemusic',
+                    url: 'https://music.youtube.com/watch?v=fj3KzEVl6qc',
+                    createdAt: new Date(),
+                },
+                {
+                    id: ParseLinkID('394a64c9-4423-4b37-b99a-d70d359cb522'),
+                    label: 'Amazon Music',
+                    icon: 'ionLogoAmazon',
+                    url: 'https://music.amazon.com/tracks/B0HM4439TW',
+                    createdAt: new Date(),
+                },
+                {
+                    id: ParseLinkID('c8cbc009-bc53-4bfa-ad2e-6ea04906cb04'),
+                    label: 'Tidal',
+                    icon: 'simpleTidal',
+                    url: 'https://tidal.com/track/567601109',
+                    createdAt: new Date(),
+                },
+            ],
             artistId: ParseArtistID('f5700c5d-b352-4df3-9fde-ce9274bc8304'),
             createdAt: new Date(),
         },
@@ -45,8 +90,9 @@ export class AlbumService {
             const album: Album = {
                 id: ParseAlbumID(crypto.randomUUID()),
                 title: createAlbum.title,
+                code: createAlbum.code,
                 coverUrl: createAlbum.coverUrl,
-                albumUrl: createAlbum.albumUrl,
+                albumUrls: createAlbum.albumUrls,
                 artistId: createAlbum.artistId,
                 createdAt: new Date(),
             };
@@ -90,6 +136,27 @@ export class AlbumService {
     }
 
     /**
+     * Retrieves an `Album` instance by its unique code.
+     *
+     * @param {AlbumCode} code - The unique code of the `Album` instance to retrieve.
+     * @throws {NotFoundError} If the `Album` instance with the specified `code` does not exist.
+     * @returns {Promise<Album>} A promise that resolves with the `Album` instance.
+     * @memberof AlbumService
+     */
+    public GetAlbumByCode(code: AlbumCode): Promise<Album> {
+        return new Promise<Album>((resolve, reject) => {
+            const album = this.FindAlbumByCode(code);
+
+            if (!album) {
+                reject(new NotFoundError(`Album with code '${code}' not found.`));
+                return;
+            }
+
+            resolve(album);
+        });
+    }
+
+    /**
      * Retrieves a list of `Album` instances by the unique identifier of the associated `Artist`.
      *
      * @param {ArtistID} artistId - The unique identifier of the `Artist` whose `Album` instances are to be retrieved.
@@ -120,16 +187,27 @@ export class AlbumService {
                 return;
             }
 
+            if (updateAlbum.code && this.FindAlbumByCode(updateAlbum.code)) {
+                reject(
+                    new AlreadyExistsError(`Album with code '${updateAlbum.code}' already exists.`),
+                );
+                return;
+            }
+
             if (updateAlbum.title !== undefined) {
                 album.title = updateAlbum.title;
+            }
+
+            if (updateAlbum.code !== undefined) {
+                album.code = updateAlbum.code;
             }
 
             if (updateAlbum.coverUrl !== undefined) {
                 album.coverUrl = updateAlbum.coverUrl;
             }
 
-            if (updateAlbum.albumUrl !== undefined) {
-                album.albumUrl = updateAlbum.albumUrl;
+            if (updateAlbum.albumUrls !== undefined) {
+                album.albumUrls = updateAlbum.albumUrls;
             }
 
             if (updateAlbum.artistId !== undefined) {
@@ -173,6 +251,18 @@ export class AlbumService {
      */
     private FindAlbumById(id: AlbumID): Album | undefined {
         return this.albums.find((album) => album.id === id);
+    }
+
+    /**
+     * Finds an `Album` instance by its unique code.
+     *
+     * @private
+     * @param {AlbumCode} code - The unique code of the `Album` instance to find.
+     * @returns {Album | undefined} The `Album` instance if found, otherwise `undefined`.
+     * @memberof AlbumService
+     */
+    private FindAlbumByCode(code: AlbumCode): Album | undefined {
+        return this.albums.find((album) => album.code === code);
     }
 
     /**

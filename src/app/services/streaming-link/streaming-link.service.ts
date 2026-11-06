@@ -22,48 +22,42 @@ export class StreamingLinkService {
      * @memberof StreamingLinkService
      */
     private readonly links: Link[] = [
-        /*{
+        {
+            id: ParseLinkID('be025a22-6a2c-4a56-a198-8c22610586b1'),
+            label: 'Spotify',
+            icon: 'simpleSpotify',
+            url: 'https://open.spotify.com/artist/3kBqTzbQjMnuDBpzE8OTyy',
+            createdAt: new Date(),
+        },
+        {
             id: ParseLinkID('4f0303c3-8896-457c-bd6f-3fc3de465d4b'),
             label: 'Apple Music',
             icon: 'simpleApplemusic',
-            url: 'https://music.apple.com/@WLB.band',
+            url: 'https://music.apple.com/artist/when-light-breaks/6819714261',
             createdAt: new Date(),
         },
         {
             id: ParseLinkID('2448e713-47d3-421f-a456-27d866a1041c'),
             label: 'YouTube Music',
             icon: 'simpleYoutubemusic',
-            url: 'https://music.youtube.com/@WLB.band',
+            url: 'https://www.youtube.com/watch?v=yduB0xUIfGg',
             createdAt: new Date(),
         },
-        {
-            id: ParseLinkID('be025a22-6a2c-4a56-a198-8c22610586b1'),
-            label: 'Spotify',
-            icon: 'simpleSpotify',
-            url: 'https://open.spotify.com/@WLB.band',
-            createdAt: new Date(),
-        },
+
         {
             id: ParseLinkID('1ed2e447-2b7f-481c-8522-1e0e2eb39b82'),
             label: 'Amazon Music',
             icon: 'ionLogoAmazon',
-            url: 'https://music.amazon.com/@WLB.band',
-            createdAt: new Date(),
-        },
-        {
-            id: ParseLinkID('9cf8a271-66b5-458d-9d03-fd8ab8269610'),
-            label: 'Deezer',
-            icon: 'simpleDeezer',
-            url: 'https://www.deezer.com/@WLB.band',
+            url: 'https://music.amazon.com/artists/B0HM49WGQY',
             createdAt: new Date(),
         },
         {
             id: ParseLinkID('311ebb52-38cd-43c6-b41b-14c82a2407cc'),
             label: 'Tidal',
             icon: 'simpleTidal',
-            url: 'https://www.tidal.com/@WLB.band',
+            url: 'https://tidal.com/artist/87688745',
             createdAt: new Date(),
-        },*/
+        },
     ];
 
     /**

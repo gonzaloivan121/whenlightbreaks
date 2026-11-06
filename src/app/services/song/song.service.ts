@@ -28,7 +28,7 @@ export class SongService {
             id: ParseSongID('b80c08dc-a540-4dc6-8add-371a5396003f'),
             title: 'Pre-Human State',
             coverUrl: 'assets/images/albums/pre-human-state.webp',
-            songUrl: 'https://example.com/songs/pre-human-state',
+            songUrl: 'https://www.whenlightbreaks.com/pre-human-state',
             albumId: ParseAlbumID('a8c171e2-aa8d-4b27-ab1f-29d8a6e86aa2'),
             artistId: ParseArtistID('f5700c5d-b352-4df3-9fde-ce9274bc8304'),
             createdAt: new Date(),

@@ -1,0 +1,24 @@
+<main class="stream-page" aria-label="Stream page">
+    @if (hasAlbum()) {
+        <div class="stream-links">
+            @for (link of album()!.albumUrls; track link.id) {
+                <button-component
+                    variant="dark"
+                    size="large"
+                    [label]="link.label"
+                    [icon]="true"
+                    [block]="true"
+                    align="left"
+                    (onClick)="OpenLink(link.url)"
+                >
+                    <ng-icon [name]="link.icon" />
+                </button-component>
+            }
+        </div>
+    } @else {
+        <div class="no-album">
+            <p>The release you are looking for does not exist.</p>
+            <p>Please check the URL or return to the home page.</p>
+        </div>
+    }
+</main>

@@ -17,7 +17,7 @@ import { AnalyticsService } from '@services/analytics/analytics.service';
 export class PressKitPage {
     private readonly assetsFolder: string = 'assets';
     private readonly documentsFolder: string = `${this.assetsFolder}/documents`;
-    private readonly pressKitFilename: string = 'When Light Breaks - Electronic Press Kit.pdf';
+    private readonly pressKitFilename: string = 'When Light Breaks - Electronic Press Kit.zip';
 
     private readonly analytics = inject(AnalyticsService);
 
@@ -25,7 +25,7 @@ export class PressKitPage {
         this.analytics.TrackEvent('download_press_kit', {
             category: 'epk',
             location: 'press_kit_page',
-            file_type: 'pdf',
+            file_type: 'zip',
         });
 
         window.open(`${this.documentsFolder}/${this.pressKitFilename}`, '_blank');

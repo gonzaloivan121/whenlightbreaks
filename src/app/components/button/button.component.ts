@@ -3,6 +3,7 @@ import { Component, computed, input, output } from '@angular/core';
 export type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark' | 'link' | 'outline-primary' | 'outline-secondary' | 'outline-tertiary' | 'outline-danger' | 'outline-success' | 'outline-warning' | 'outline-info' | 'outline-light' | 'outline-dark';
 export type ButtonSize = 'small' | 'medium' | 'large';
 export type ButtonIconPosition = 'start' | 'end';
+export type ButtonAlign = 'left' | 'center' | 'right';
 
 @Component({
     selector: 'button-component',
@@ -19,6 +20,7 @@ export class ButtonComponent {
     icon = input<boolean>(false);
     iconPosition = input<ButtonIconPosition>('start');
     block = input<boolean>(false);
+    align = input<ButtonAlign>('center');
 
     onClick = output<void>();
 
@@ -32,6 +34,10 @@ export class ButtonComponent {
 
         if (this.block()) {
             classes.push('block');
+        }
+
+        if (this.align()) {
+            classes.push(`align-${this.align()}`);
         }
 
         if (customClass) {

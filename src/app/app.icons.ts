@@ -23,10 +23,9 @@ import {
 } from '@ng-icons/ionicons';
 
 import {
+    simpleSpotify,
     simpleApplemusic,
     simpleYoutubemusic,
-    simpleSpotify,
-    simpleDeezer,
     simpleTidal,
 } from '@ng-icons/simple-icons';
 
@@ -59,6 +58,5 @@ export const simpleIcons = {
     simpleApplemusic,
     simpleYoutubemusic,
     simpleSpotify,
-    simpleDeezer,
     simpleTidal,
 };
