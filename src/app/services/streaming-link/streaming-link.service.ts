@@ -43,7 +43,6 @@ export class StreamingLinkService {
             url: 'https://www.youtube.com/watch?v=yduB0xUIfGg',
             createdAt: new Date(),
         },
-
         {
             id: ParseLinkID('1ed2e447-2b7f-481c-8522-1e0e2eb39b82'),
             label: 'Amazon Music',
