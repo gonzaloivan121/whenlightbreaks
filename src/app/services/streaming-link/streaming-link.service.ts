@@ -52,6 +52,13 @@ export class StreamingLinkService {
             createdAt: new Date(),
         },
         {
+            id: ParseLinkID('9cf8a271-66b5-458d-9d03-fd8ab8269610'),
+            label: 'Deezer',
+            icon: 'simpleDeezer',
+            url: 'https://www.deezer.com/artist/420590952',
+            createdAt: new Date(),
+        },
+        {
             id: ParseLinkID('311ebb52-38cd-43c6-b41b-14c82a2407cc'),
             label: 'Tidal',
             icon: 'simpleTidal',

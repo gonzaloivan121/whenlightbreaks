@@ -66,6 +66,13 @@ export class AlbumService {
                     createdAt: new Date(),
                 },
                 {
+                    id: ParseLinkID('25b8d6ab-b0a0-478d-91a0-6b200c844e31'),
+                    label: 'Deezer',
+                    icon: 'simpleDeezer',
+                    url: 'https://www.deezer.com/track/4331338342',
+                    createdAt: new Date(),
+                },
+                {
                     id: ParseLinkID('c8cbc009-bc53-4bfa-ad2e-6ea04906cb04'),
                     label: 'Tidal',
                     icon: 'simpleTidal',
