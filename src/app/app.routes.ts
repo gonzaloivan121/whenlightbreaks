@@ -16,7 +16,7 @@ export const routes: Routes = [
         title: 'Home',
         data: {
             description:
-                'Formed in New York in 2026, When Light Breaks is an independent alternative metal band featuring Blegh Lady (vocals), DVRK PRISM (guitar), Dreadful Gooz (bass), and Morgan Simons (drums)',
+                'Formed in New York in 2026, When Light Breaks is an independent alternative metal band featuring Blegh Lady, DVRK PRISM, Dreadful Gooz, and Morgan Simons',
         },
         component: HomePage,
     },
