@@ -28,6 +28,7 @@ import {
     simpleYoutubemusic,
     simpleDeezer,
     simpleTidal,
+    simplePandora,
 } from '@ng-icons/simple-icons';
 
 export const ionIcons = {
@@ -61,4 +62,5 @@ export const simpleIcons = {
     simpleYoutubemusic,
     simpleDeezer,
     simpleTidal,
+    simplePandora,
 };

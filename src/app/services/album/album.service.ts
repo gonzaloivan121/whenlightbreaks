@@ -79,6 +79,13 @@ export class AlbumService {
                     url: 'https://tidal.com/track/567601109',
                     createdAt: new Date(),
                 },
+                {
+                    id: ParseLinkID('70d0d62c-40d8-4b81-b940-d710a3bcddb8'),
+                    label: 'Pandora',
+                    icon: 'simplePandora',
+                    url: 'https://www.pandora.com/artist/when-light-breaks/pre-human-state/pre-human-state/TRJprhVl9gx7frq',
+                    createdAt: new Date(),
+                },
             ],
             artistId: ParseArtistID('f5700c5d-b352-4df3-9fde-ce9274bc8304'),
             createdAt: new Date(),

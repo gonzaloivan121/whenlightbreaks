@@ -65,6 +65,13 @@ export class StreamingLinkService {
             url: 'https://tidal.com/artist/87688745',
             createdAt: new Date(),
         },
+        {
+            id: ParseLinkID('618bc01a-a1e0-498b-b564-dc35efe64bc2'),
+            label: 'Pandora',
+            icon: 'simplePandora',
+            url: 'https://www.pandora.com/artist/when-light-breaks/ARxzjzvzlqPZXlm',
+            createdAt: new Date(),
+        },
     ];
 
     /**
