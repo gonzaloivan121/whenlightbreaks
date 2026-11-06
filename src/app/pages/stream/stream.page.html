@@ -9,7 +9,8 @@
                     [icon]="true"
                     [block]="true"
                     align="left"
-                    (onClick)="OpenLink(link.url)"
+                    (onClick)="OpenLink(link)"
+                    title="Stream {{ album()!.title }} on {{ link.label }}"
                 >
                     <ng-icon [name]="link.icon" />
                 </button-component>
