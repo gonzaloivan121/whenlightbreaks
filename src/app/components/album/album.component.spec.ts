@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ToAlbumID } from '@app/types/album.type';
+import { ToAlbumCode, ToAlbumID } from '@app/types/album.type';
 import { ToArtistID } from '@app/types/artist.type';
 import type { Album } from '@models/album.model';
 
@@ -19,8 +19,9 @@ describe('AlbumComponent', () => {
         fixture.componentRef.setInput('album', {
             id: ToAlbumID(crypto.randomUUID()),
             title: 'Test Album',
+            code: ToAlbumCode('test-album'),
             coverUrl: 'https://example.com/cover.jpg',
-            albumUrl: 'https://example.com/album',
+            albumUrls: [],
             artistId: ToArtistID(crypto.randomUUID()),
             createdAt: new Date(),
         } satisfies Album);
