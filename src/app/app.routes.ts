@@ -53,8 +53,7 @@ export const routes: Routes = [
         path: 'pre-human-state',
         title: 'Pre-Human State',
         data: {
-            description:
-                'Stream the official single "Pre-Human State" by When Light Breaks.',
+            description: 'Stream the official single "Pre-Human State" by When Light Breaks.',
         },
         component: StreamPage,
     },
