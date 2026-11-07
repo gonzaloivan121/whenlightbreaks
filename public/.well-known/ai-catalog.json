@@ -2,14 +2,14 @@
     "specVersion": "1.0",
     "host": {
         "displayName": "When Light Breaks",
-        "documentationUrl": "https://www.whenlightbreaks.com/"
+        "documentationUrl": "https://www.whenlightbreaks.com"
     },
     "entries": [
         {
             "identifier": "urn:air:whenlightbreaks.com:site:homepage",
             "displayName": "When Light Breaks Home",
             "type": "text/html",
-            "url": "https://www.whenlightbreaks.com/",
+            "url": "https://www.whenlightbreaks.com",
             "description": "Official homepage for When Light Breaks, featuring the band's music, story, and latest updates.",
             "representativeQueries": [
                 "who is When Light Breaks",
