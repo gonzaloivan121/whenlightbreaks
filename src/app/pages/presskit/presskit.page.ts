@@ -15,10 +15,6 @@ import { AnalyticsService } from '@services/analytics/analytics.service';
     styleUrl: './presskit.page.css',
 })
 export class PressKitPage {
-    private readonly assetsFolder: string = 'assets';
-    private readonly documentsFolder: string = `${this.assetsFolder}/documents`;
-    private readonly pressKitFilename: string = 'When Light Breaks - Electronic Press Kit.zip';
-
     private readonly analytics = inject(AnalyticsService);
 
     DownloadPressKit(): void {
@@ -28,6 +24,10 @@ export class PressKitPage {
             file_type: 'zip',
         });
 
-        window.open(`${this.documentsFolder}/${this.pressKitFilename}`, '_blank');
+        window.open(
+            `https://drive.google.com/drive/folders/18UfrKY8Ef2iJGGiJV2Q_yeIXnUftiW5G`,
+            '_blank',
+            'noopener noreferrer'
+        );
     }
 }
