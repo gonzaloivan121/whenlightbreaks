@@ -40,7 +40,7 @@ export class StreamingLinkService {
             id: ParseLinkID('2448e713-47d3-421f-a456-27d866a1041c'),
             label: 'YouTube Music',
             icon: 'simpleYoutubemusic',
-            url: 'https://www.youtube.com/watch?v=yduB0xUIfGg',
+            url: 'https://music.youtube.com/channel/UCvnegPPD-IkxuxTSTLf0l-w',
             createdAt: new Date(),
         },
         {
